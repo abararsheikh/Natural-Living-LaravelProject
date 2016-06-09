@@ -1,0 +1,4 @@
+WHEN YOU PULL THE PROJECT FROM GIT IT DOESN'T HAVE VENDOR AND .ENV FILE.
+so first run the "composer update" command in terminal and then add .env file.
+I am putting .env file as .env.readme when you pulled it from repository rename it back to .env
+and pest it from outside of SQL_database folde.

@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'abrar.phpproject@gmail.com', 'name' => 'Password Reset'],
 
     /*
     |--------------------------------------------------------------------------

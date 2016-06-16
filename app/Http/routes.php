@@ -19,3 +19,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/parks', 'ParkController@index');
+Route::get('/planner','WeeklyPlanner\IndexController@index');

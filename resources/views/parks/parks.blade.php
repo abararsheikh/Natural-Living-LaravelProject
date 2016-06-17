@@ -8,8 +8,17 @@
         padding: 0;
     }
     #map {
-        width: 100%;
-        height: 400px;
+        width: 73%;
+        height: 600px;
+    }
+    #result{
+        display: inline-block;
+        float: right;
+        width: 25%;
+        background-color: darkgrey;
+        padding: 15px;
+        overflow:scroll;
+        height: 600px;
     }
 </style>
 <div class="container">
@@ -17,7 +26,6 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Parks and Recreation Facilities</div>
-
                 <div class="panel-body">
                     <input id="facility" type="text" />
                 </div>
@@ -39,10 +47,55 @@
             var fac=$('#facility').val();
             $.get( "RecreationLocations.xml", function(data) {
                 $(data).find('Location').each(function() {
-                    var location=$(this).find('Facilities');
-                    location.find('Facility').each(function(){
+                    var location=$(this);
+                    var facilities=location.find('Facilities');
+                    facilities.find('Facility').each(function(){
                         var facility=$(this);
                         if(facility.find('FacilityDisplayName').text()==fac){
+                            location.children().each(function(){
+                                if($(this).prop("tagName")=='Address'){
+                                    var address=$(this).text().trim();
+                                    address+=", Toronto, ON, Canada";
+                                    var GoogleMapAPI = "https://maps.googleapis.com/maps/api/geocode/json";
+                                    $.getJSON(GoogleMapAPI,{address: address,key:"AIzaSyDonA-uL5xYVbfsk9usZf3DC7zRR0UyMqA"},
+                                        function(data){
+                                            //alert('test');
+                                            var mylatLng1=[];
+                                            myLatLng1.push(data.results[0].geometry.location);
+                                            update(myLatLng1);
+                                            console.log(myLatLng1);
+                                            initMap();
+                                        }); // end getJSON
+                                }
+                                if($(this).prop("tagName")=='LocationName')
+                                result+=$(this).text()+"<br/>";
+                            });
+                            result+="<hr/>";
+                        }
+                    })
+                    //initMap();
+                });
+                $("#result").html(result);
+            }, "xml");
+        });
+    });
+/*var myLatLng=[];
+    var infolocation=[];
+    function update(mylat){
+        myLatLng=mylat;
+    }
+    $(document).ready(function() {
+       $('#facility').change(function(){
+            var myLatLng1=[];
+            var result="";
+            var fac=$('#facility').val();
+       // if(fac!=""){
+            $.get( "RecreationLocations.xml", function(data) {
+                $(data).find('Location').each(function() {
+                    var location=$(this);
+                   // location.find('LocationName').each(function(){
+                       var facility=location.find('LocationName');
+                        if(facility.text()===fac){
                             location.children().each(function(){
                                 if($(this).prop("tagName")=='Address'){
                                     var address=$(this).text().trim();
@@ -64,19 +117,19 @@
                             });
                             result+="<hr/>";
                         }
-                    })
-
-                    initMap();
+                   // })
+                    //initMap();
                 });
                 $("#result").html(result);
 
             }, "xml");
+       // }
         });
-    });
+    });*/
     function initMap() {
         var infor="hhhhhh";
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
+            zoom: 11,
             center:  {lat: 43.660800, lng: -79.415168}
         });
         var infowindow = new google.maps.InfoWindow({

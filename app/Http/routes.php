@@ -20,3 +20,8 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::get('/parks', 'ParkController@index');
 Route::get('/planner','WeeklyPlanner\IndexController@index');
+Route::get('bodyData','WeeklyPlanner\bodyDataController@index');
+Route::get('/quotations','WeeklyPlanner\DailyQuoteController@index');
+Route::post('/newBodyData','WeeklyPlanner\bodyDataController@store');
+Route::post('/newBodyMeasureData','WeeklyPlanner\bodyDataController@storeMeasurements');
+

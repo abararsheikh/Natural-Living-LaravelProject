@@ -25,3 +25,4 @@ Route::get('/quotations','WeeklyPlanner\DailyQuoteController@index');
 Route::post('/newBodyData','WeeklyPlanner\bodyDataController@store');
 Route::post('/newBodyMeasureData','WeeklyPlanner\bodyDataController@storeMeasurements');
 
+Route::get('/mealplanner','WeeklyPlanner\mealController@index');

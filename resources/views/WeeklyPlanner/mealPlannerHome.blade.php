@@ -27,19 +27,12 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color:lightcyan;">Daily Motivational Quote</div>
-                    <div class="panel-body">
-                        <!--JavaScript code for single Motivational Quote of the Day, http://www.tqpage.com/ from The Quotations Page-->
-                        <script language="javascript" src="http://www.quotationspage.com/data/1mqotd.js">
-                        </script> <!--End JavaScript Quotations code-->
+
+                        <h1>Hi I am in meal planner home</h1>
 
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
 
 @endsection
 </body>

@@ -26,3 +26,18 @@ Route::post('/newBodyData','WeeklyPlanner\bodyDataController@store');
 Route::post('/newBodyMeasureData','WeeklyPlanner\bodyDataController@storeMeasurements');
 
 Route::get('/mealplanner','WeeklyPlanner\mealController@index');
+
+
+//recipes blog
+Route::get('recipe','RecipeController@index');
+
+
+
+Route::get('recipe/create', 'RecipeController@create');
+Route::get('recipe/import', 'RecipeController@importCreate');
+Route::get('recipe/{id}', 'RecipeController@show');
+Route::get('recipe/{id}/edit', 'RecipeController@edit');
+Route::post('recipe', 'RecipeController@store');
+Route::post('recipe/import', 'RecipeController@import');
+Route::put('recipe/{id}', 'RecipeController@update');
+Route::get('recipe/{id}/delete', 'RecipeController@destroy');

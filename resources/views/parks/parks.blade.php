@@ -68,6 +68,8 @@
                                         }); // end getJSON
                                 }
                                 if($(this).prop("tagName")=='LocationName')
+                                //var n=$(this).text();
+                               // if(!result.contains(n))
                                 result+=$(this).text()+"<br/>";
                             });
                             result+="<hr/>";

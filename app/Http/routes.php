@@ -28,16 +28,68 @@ Route::post('/newBodyMeasureData','WeeklyPlanner\bodyDataController@storeMeasure
 Route::get('/mealplanner','WeeklyPlanner\mealController@index');
 
 
-//recipes blog
-Route::get('recipe','RecipeController@index');
+//recipes blogs routes
+Route::group(['middleware' => 'web'], function () {
+
+
+    Route::get('/home', 'HomeController@index');
+    Route::get('/recipes', ['as'=>'recipe.index','uses'=>'RecipeController@index']);
 
 
 
-Route::get('recipe/create', 'RecipeController@create');
-Route::get('recipe/import', 'RecipeController@importCreate');
-Route::get('recipe/{id}', 'RecipeController@show');
-Route::get('recipe/{id}/edit', 'RecipeController@edit');
-Route::post('recipe', 'RecipeController@store');
-Route::post('recipe/import', 'RecipeController@import');
-Route::put('recipe/{id}', 'RecipeController@update');
-Route::get('recipe/{id}/delete', 'RecipeController@destroy');
+    Route::group(['middleware' => 'auth'], function () {
+
+
+        Route::get('/user/{id}/edit',['as'=>'user.edit','uses'=>'UserController@edit']);
+        Route::put('/user/{id}',['as'=>'user.update','uses'=>'UserController@update']);
+        Route::get('/user/{id}',['as'=>'user.show','uses'=>'UserController@show']);
+
+
+
+        Route::get('/recipe/create', ['as'=>'recipe.create','uses'=>'RecipeController@create']);
+        Route::post('/recipe',['as'=>'recipe.store','uses'=> 'RecipeController@store']);
+        Route::get('/recipe/{id}/edit',['as'=>'recipe.edit','uses'=>'RecipeController@edit']);
+        Route::put('/recipe/{id}',['as'=>'recipe.update','uses'=>'RecipeController@update']);
+        Route::delete('/recipe/{id}',['as'=>'recipe.destroy','uses'=>'RecipeController@destroy']);
+
+
+
+        Route::group(['middleware' => 'admin'], function(){
+
+
+            Route::get('/admin',['as'=>'admin.index','uses'=>'AdminController@index']);
+            Route::get('/admin/recipe',['as'=>'admin.recipe','uses'=>'AdminController@recipe']);
+            Route::get('/admin/ingredient',['as'=>'admin.ingredient','uses'=>'AdminController@ingredient']);
+            Route::get('/admin/user',['as'=>'admin.user','uses'=>'AdminController@user']);
+            Route::get('/admin/category' ,['as'=>'admin.category','uses'=>'AdminController@category']);
+
+
+
+            Route::get('/admin/ingredient/{id}/edit',['as'=>'ingredient.edit','uses'=>'AdminController@ingredientEdit']);
+            Route::put('/admin/ingredient/{id}',['as'=>'ingredient.update','uses'=>'AdminController@ingredientUpdate']);
+            Route::delete('/admin/ingredient/{id}',['as'=>'ingredient.destroy','uses'=>'AdminController@ingredientDestroy']);
+            Route::post('/admin/ingredient', ['as'=>'ingredient.store' , 'uses'=>'AdminController@ingredientStore']);
+
+
+            Route::post('admin/cateogry' ,['as'=>'category.store','uses'=>'AdminController@categoryStore']);
+            Route::get('admin/cateogry/{id}/edit' ,['as'=>'category.edit','uses'=>'AdminController@categoryEdit']);
+            Route::put('admin/category/{id}' ,['as'=>'category.update','uses'=>'AdminController@categoryUpdate']);
+            Route::delete('admin/category/{id}' ,['as'=>'category.destroy','uses'=>'AdminController@categoryDestroy']);
+
+
+            Route::get('/admin/setting' ,['as'=>'admin.setting','uses'=>'AdminController@setting']);
+            Route::put('/admin/setting' ,['as'=>'setting.update' ,'uses'=>'AdminController@settingUpdate']);
+
+        });
+
+
+    });
+
+    Route::get('/recipe/{id}',['as'=>'recipe.show','uses'=>'RecipeController@show']);
+    Route::get('/search/title',['as'=>'search.title','uses'=>'SearchController@searchTitle']);
+    Route::get('/search/ingredient',['as'=>'search.ingredient','uses'=>'SearchController@searchIngredient']);
+
+});
+
+
+

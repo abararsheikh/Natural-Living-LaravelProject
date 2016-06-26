@@ -18,13 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-
-Route::get('/parks', 'ParkController@index');
-Route::get('/parkDetails/{name}/{address}',[
-    'uses' => 'ParkController@detail',
-    'as'   => 'details'
-]);
-
+Route::get('/parks', 'parkController@index');
 Route::get('/planner','WeeklyPlanner\IndexController@index');
 Route::get('bodyData','WeeklyPlanner\bodyDataController@index');
 Route::get('/quotations','WeeklyPlanner\DailyQuoteController@index');

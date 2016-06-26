@@ -27,48 +27,61 @@
     </div>
     <div class="container">
         <div class="row">
-
             <!-- Adding Breakfast -->
             <div class="buttons-navigation" style="margin-left: 25%;margin-bottom: 5%;">
                 <ul class="nav nav-pills">
                     @if($today == 'Mon')
-                        <li><a class="btn btn-default active" id="Mon" href="{{url('/mealplanner') }}">Monday</a></li>
+                        <li><a class="btn btn-default" id="Mon" href="{{url('/mealplanner') }}">Monday</a></li>
+                    @elseif($day== 'Mon')
+                        <li><a class="btn btn-default active" id="Mon" href="{{url('/mealplanner/Mon') }}">Monday</a></li>
                     @else
                         <li><a class="btn btn-default" id="Mon" href="{{url('/mealplanner/Mon') }}">Monday</a></li>
                     @endif
 
                     @if($today == 'Tue')
-                        <li><a class="btn btn-default active" id="Tue" href="{{url('/mealplanner') }}">Tuesday</a></li>
+                        <li><a class="btn btn-default" id="Tue" href="{{url('/mealplanner') }}">Tuesday</a></li>
+                    @elseif($day== 'Tue')
+                        <li><a class="btn btn-default active" id="Tue" href="{{url('/mealplanner/Tue') }}">Tuesday</a></li>
                     @else
                         <li><a class="btn btn-default" id="Tue" href="{{url('/mealplanner/Tue') }}">Tuesday</a></li>
                     @endif
 
                     @if($today == 'Wed')
-                        <li><a class="btn btn-default active" id="Wed" href="{{url('/mealplanner') }}">Wednesday</a></li>
+                        <li><a class="btn btn-default " id="Wed" href="{{url('/mealplanner') }}">Wednesday</a></li>
+                    @elseif($day== 'Wed')
+                        <li><a class="btn btn-default active" id="Wed" href="{{url('/mealplanner/Wed') }}">Wednesday</a></li>
                     @else
                         <li><a class="btn btn-default" id="Wed" href="{{url('/mealplanner/Wed') }}">Wednesday</a></li>
                     @endif
 
                     @if ($today == 'Thu')
-                        <li><a class="btn btn-default active" id="Thu" href="{{url('/mealplanner') }}">Thursday</a></li>
+                        <li><a class="btn btn-default " id="Thu" href="{{url('/mealplanner') }}">Thursday</a></li>
+                    @elseif($day== 'Thu')
+                        <li><a class="btn btn-default active" id="Thu" href="{{url('/mealplanner/Thu') }}">Thursday</a></li>
                     @else
                         <li><a class="btn btn-default" id="Thu" href="{{url('/mealplanner/Thu') }}">Thursday</a></li>
                     @endif
 
                     @if($today == 'Fri')
-                        <li><a class="btn btn-default active" id="Fri" href="{{url('/mealplanner') }}">Friday</a></li>
+                        <li><a class="btn btn-default " id="Fri" href="{{url('/mealplanner') }}">Friday</a></li>
+                    @elseif($day== 'Fri')
+                        <li><a class="btn btn-default active" id="Fri" href="{{url('/mealplanner/Fri') }}">Friday</a></li>
                     @else
                         <li><a class="btn btn-default" id="Fri" href="{{url('/mealplanner/Fri') }}">Friday</a></li>
                     @endif
 
                     @if($today == 'Sat')
-                        <li><a class="btn btn-default active" id="Sat" href="{{url('/mealplanner') }}">Saturday</a></li>
+                        <li><a class="btn btn-default" id="Sat" href="{{url('/mealplanner') }}">Saturday</a></li>
+                    @elseif($day== 'Sat')
+                        <li><a class="btn btn-default active" id="Sat" href="{{url('/mealplanner/Sat') }}">Saturday</a></li>
                     @else
                         <li><a class="btn btn-default" id="Sat" href="{{url('/mealplanner/Sat') }}">Saturday</a></li>
                     @endif
 
                     @if($today == 'Sun')
                         <li><a class="btn btn-default active" id="Sun" href="{{url('/mealplanner') }}">Sunday</a></li>
+                    @elseif($day== 'Sun')
+                        <li><a class="btn btn-default active" id="Sun" href="{{url('/mealplanner/Sun') }}">Sunday</a></li>
                     @else
                         <li><a class="btn btn-default" id="Sun" href="{{url('/mealplanner/Sun') }}">Sunday</a></li>
                     @endif
@@ -78,7 +91,7 @@
                 @include('common.errors')
 
                         <!-- New Task Form -->
-                <form action="{{ url('breakfastAdd') }}" method="POST" class="form-horizontal">
+                <form action="{{ url('breakfastAdd',$day) }}" method="POST" class="form-horizontal">
                     {{ csrf_field() }}
 
                             <!-- Task Name -->
@@ -132,7 +145,7 @@
                                 </td>
 
                                 <td>
-                                    <form action="{{ url('deleteMealFood/'.$meal->id) }}" method="POST">
+                                    <form action="{{ url('deleteMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
@@ -143,7 +156,7 @@
                                 </td>
                                 <td>
                                     @if($meal->food_Status == false)
-                                        <form action="{{ url('doneMealFood/'.$meal->id) }}" method="POST">
+                                        <form action="{{ url('doneMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                             {{ csrf_field() }}
 
                                             <button type="submit" class="btn btn-default">
@@ -151,7 +164,7 @@
                                             </button>
                                         </form>
                                     @elseif($meal->food_Status == true)
-                                        <form action="{{ url('undoMealFood/'.$meal->id) }}" method="POST">
+                                        <form action="{{ url('undoMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                             {{ csrf_field() }}
 
                                             <button type="submit" class="btn btn-default" name="breakfastFoodAdd">
@@ -176,7 +189,7 @@
             <div class="panel-body">
 
                 <!-- New Task Form -->
-                <form action="{{ url('lunchAdd') }}" method="POST" class="form-horizontal" name="formLunch">
+                <form action="{{ url('lunchAdd',$day) }}" method="POST" class="form-horizontal" name="formLunch">
                     {{ csrf_field() }}
 
                             <!-- Task Name -->
@@ -233,7 +246,7 @@
                                 </td>
 
                                 <td>
-                                    <form action="{{ url('deleteMealFood/'.$meal->id) }}" method="POST">
+                                    <form action="{{ url('deleteMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
@@ -244,7 +257,7 @@
                                 </td>
                                 <td>
                                     @if($meal->food_Status == false)
-                                        <form action="{{ url('doneMealFood/'.$meal->id) }}" method="POST">
+                                        <form action="{{ url('doneMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                             {{ csrf_field() }}
 
                                             <button type="submit" class="btn btn-default">
@@ -252,7 +265,7 @@
                                             </button>
                                         </form>
                                     @elseif($meal->food_Status == true)
-                                        <form action="{{ url('undoMealFood/'.$meal->id) }}" method="POST">
+                                        <form action="{{ url('undoMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                             {{ csrf_field() }}
 
                                             <button type="submit" class="btn btn-default" name="lunchFoodAdd">
@@ -279,7 +292,7 @@
             <div class="panel-body">
 
                 <!-- New Task Form -->
-                <form action="{{ url('dinnerAdd') }}" method="POST" class="form-horizontal" name="formDinner">
+                <form action="{{ url('dinnerAdd',$day) }}" method="POST" class="form-horizontal" name="formDinner">
                     {{ csrf_field() }}
 
                             <!-- Task Name -->
@@ -333,7 +346,7 @@
                                 </td>
 
                                 <td>
-                                    <form action="{{ url('deleteMealFood/'.$meal->id) }}" method="POST">
+                                    <form action="{{ url('deleteMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
@@ -344,7 +357,7 @@
                                 </td>
                                 <td>
                                     @if($meal->food_Status == false)
-                                        <form action="{{ url('doneMealFood/'.$meal->id) }}" method="POST">
+                                        <form action="{{ url('doneMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                             {{ csrf_field() }}
 
                                             <button type="submit" class="btn btn-default">
@@ -352,7 +365,7 @@
                                             </button>
                                         </form>
                                     @elseif($meal->food_Status == true)
-                                        <form action="{{ url('undoMealFood/'.$meal->id) }}" method="POST">
+                                        <form action="{{ url('undoMealFoodDay/'.$meal->id)."/".$day }}" method="POST">
                                             {{ csrf_field() }}
 
                                             <button type="submit" class="btn btn-default" name="lunchFoodAdd">

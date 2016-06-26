@@ -20,6 +20,9 @@
         overflow:scroll;
         height: 600px;
     }
+    #result1{
+        display: none;
+    }
 </style>
 <div class="container">
     <div class="row">
@@ -44,6 +47,7 @@
         $('#facility').change(function(){
             var myLatLng1=[];
             var result="";
+            var details="";
             var fac=$('#facility').val();
             $.get( "RecreationLocations.xml", function(data) {
                 $(data).find('Location').each(function() {
@@ -67,17 +71,20 @@
                                             initMap();
                                         }); // end getJSON
                                 }
-                                if($(this).prop("tagName")=='LocationName')
-                                //var n=$(this).text();
-                               // if(!result.contains(n))
-                                result+=$(this).text()+"<br/>";
+                                if($(this).prop("tagName")=='LocationName'){
+                                    var va=$(this).text();
+                                   details+="<a href='details?name='fatemeh'&address='abdi'>"+$(this).text()+"</a></br>';
+                                   // details+={{ HTML::link('http://google.com', 'testing')}};
+                                    result+=$(this).text()+"<br/>";
+                                }
                             });
                             result+="<hr/>";
                         }
                     })
                     //initMap();
                 });
-                $("#result").html(result);
+                $("#result1").html(result);
+               $("#result").html(details);
             }, "xml");
         });
     });
@@ -141,7 +148,7 @@
         var markers=[];
         var location;
         var information;
-        information=document.getElementById('result').innerHTML;
+        information=document.getElementById('result1').innerHTML;
         var inf=information.split("<hr>");
 
         for(var i= 0;i<myLatLng.length;i++){
@@ -164,6 +171,7 @@
         }
     }
 </script>
+<div id="result1"></div>
 <div id="result"></div>
 <div id="map"></div>
 <script async defer

@@ -26,4 +26,8 @@ class ParkController extends Controller
     {
         return view('parks.parks');
     }
+    public function detail($name, $address){
+
+        return view('parks.parkDetails', ['name' => $name,'address'=>$address]);
+    }
 }

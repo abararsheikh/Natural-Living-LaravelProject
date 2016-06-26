@@ -18,13 +18,18 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
 Route::get('/parks', 'ParkController@index');
+Route::get('/parkDetails/{name}/{address}',[
+    'uses' => 'ParkController@detail',
+    'as'   => 'details'
+]);
+
 Route::get('/planner','WeeklyPlanner\IndexController@index');
 Route::get('bodyData','WeeklyPlanner\bodyDataController@index');
 Route::get('/quotations','WeeklyPlanner\DailyQuoteController@index');
 Route::post('/newBodyData','WeeklyPlanner\bodyDataController@store');
 Route::post('/newBodyMeasureData','WeeklyPlanner\bodyDataController@storeMeasurements');
-
 Route::get('/mealplanner','WeeklyPlanner\mealController@index');
 
 

@@ -7,10 +7,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                   <h1>Recipes List</h1>
+                   <h1>Elenco ricette</h1>
                    </div>
                      <div class="col-sm-4 pull-right">
-            		<h3>Search By ingredient</h3>
+            		<h3>Ricerca Per ingrediente</h3>
                     <div id="custom-search-input">
                         <div class="input-group col-sm-12">
                             {{ Form::open(['route' => 'search.ingredient', 'method' => 'get', 'role'=>'search', 'class'=>'navbar-form']) }}
@@ -42,7 +42,7 @@
                                 @endif
                                 
                                 <h4 class="media-heading"> {{ $recipe->title }}</h4>
-                                <div class="text-left">Categories: {{ ucfirst($recipe->category->name) }}</div><div class="text-right">Author: {{ $recipe->user->name }}</div><br>
+                                <div class="text-left">Categoria: {{ ucfirst($recipe->category->name) }}</div><div class="text-right">Autore: {{ $recipe->user->name }}</div><br>
                                <div class="description-box">
                                 
                                     {{ str_limit( $recipe->description, 320, $end= '...' ) }}
@@ -56,7 +56,7 @@
             <li>|</li>
             <span><i class=" glyphicon glyphicon-sort-by-attributes"></i>
             
-            {{ $recipe->ingredient_to_recipes->count() }}Ingredients</span>
+            {{ $recipe->ingredient_to_recipes->count() }}ingredienti</span>
             
             <li>|</li>
             <li>
@@ -68,8 +68,7 @@
             
             
 			</ul>
-			<a class="btn btn-info" href="{{ route('recipe.show', ['id' => $recipe->id]) }}">Read All
-            </a>
+			<a class="btn btn-info" href="{{ route('recipe.show', ['id' => $recipe->id]) }}">Leggi Tutta</a> 
             </div>
             
              </div>

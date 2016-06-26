@@ -21,7 +21,7 @@
            			 </div>
         			 <div class="col-sm-4">
         			     <br>
-        			     {!! Form::submit('Modifica', ['id'=>'modify_ingredient','class' => 'btn btn-primary  ']) !!}
+        			     {!! Form::submit('Modify', ['id'=>'modify_ingredient','class' => 'btn btn-primary  ']) !!}
         			 </div>
 </div>
 @endsection

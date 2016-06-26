@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use App\Recipe;
+use App\Category;
+
 class HomeController extends Controller
 {
     /**
@@ -14,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        
     }
 
     /**
@@ -24,6 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $recipes= Recipe::orderBy('id','desc')->get()->take(100);
+        $categories = Category::all();
+        
+       
+        
+        return view('home' ,['recipes' => $recipes, 'categories' => $categories]);
     }
 }

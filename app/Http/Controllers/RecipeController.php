@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,26 +18,30 @@ use DB;
 
 class RecipeController extends Controller
 {
-    
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+     
     protected $paginate;
-
+    
     public function __construct()
     {
         $this->paginate = Setting::first()->paginate_recipe;
 
-    }
-
-
+    } 
+    
+     
     public function index()
     {
         $recipes = Recipe::orderBy('id','desc')->paginate($this->paginate);
-
-
-
-
-
-
+      
+       
+       
+            
+      
+        
         return view('recipe.index' ,['recipes' => $recipes]);
     }
 
@@ -51,10 +53,10 @@ class RecipeController extends Controller
     public function create()
     {
         //
-
+        
         $categories = Category::all();
         $ingredients = Ingredient::orderBy('name')->get();
-
+        
         return view('recipe.create', ['categories' => $categories, 'ingredients' => $ingredients ]);
     }
 
@@ -66,31 +68,31 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
-
-
+        
+        
         $this->validate($request, [
-            'title' => 'required | between:3,255',
-            'description' => 'required | min:10',
-            'category' => 'required',
-            'difficult' => 'required',
-            'imageToUpload' => 'image|max:400',
+        'title' => 'required | between:3,255',
+        'description' => 'required | min:10',
+        'category' => 'required',
+        'difficult' => 'required',
+        'imageToUpload' => 'image|max:400',
 
         ]);
-
-
-
+        
+        
+        
         $recipe = new Recipe;
         $recipe->title = $request->title;
         $recipe->description = $request->description;
-
+       
         $recipe->category_id = $request->category;
-
+        
         $recipe->user_id = Auth::id();
         $recipe->difficult = $request->difficult;
-
+        
         $recipe->save();
         $recipe_id = $recipe->id;
-
+        
         $ingredients = $request->ingredient;
         $ingredients = explode(", ",$ingredients);
         foreach($ingredients as $ingredient){
@@ -109,32 +111,32 @@ class RecipeController extends Controller
                 $ingredient_to_recipe->save();
             }
         }
-
+        
         if ($request->hasFile('imageToUpload')) {
             if ($request->file('imageToUpload')->isValid()) {
                 if(substr($request->file('imageToUpload')->getMimeType(), 0, 5) == 'image') {
+   
 
-
-                    $destinationPath = 'assets/img/recipe';
-                    $request->file('imageToUpload')->move($destinationPath, $recipe_id.".jpg");
-                    $error_image="";
+                 $destinationPath = 'assets/img/recipe';
+                $request->file('imageToUpload')->move($destinationPath, $recipe_id.".jpg");
+                $error_image="";
                 }else{
                     $error_image=" Il file non è un immagine, non è stata caricata!";
                 }
+            }   
+        }
+         if(!isset($error_image)){
+                $error_image="";
             }
-        }
-        if(!isset($error_image)){
-            $error_image="";
-        }
-
+     
         if(Auth::user()->isAdmin()){
-
+            
             return redirect()->route('recipe.show',[$recipe_id])->with('status', 'Riccetta Aggiunta!'.$error_image);
-
+            
         }else{
-
-            return redirect()->route('recipe.show',[$recipe_id])->with('status', 'Riccetta Aggiunta!'.$error_image);
-
+            
+    	    return redirect()->route('recipe.show',[$recipe_id])->with('status', 'Riccetta Aggiunta!'.$error_image);
+    	
         }
     }
 
@@ -146,18 +148,18 @@ class RecipeController extends Controller
      */
     public function show($id)
     {
-        $recipe= Recipe::find($id);
-        if($recipe != null ){
-
-
-            $ingredients_to_recipes = Recipe::find($id)->ingredient_to_recipes;
-            return view('recipe.show' ,['recipe' => $recipe, 'ingredients_to_recipes' => $ingredients_to_recipes]);
-        }else{
-
-
-
-            return redirect()->route('recipe.index')->with('status-warning', 'Ricetta non trovata!');
-        }
+       $recipe= Recipe::find($id);
+            if($recipe != null ){
+                
+            
+                $ingredients_to_recipes = Recipe::find($id)->ingredient_to_recipes;
+                return view('recipe.show' ,['recipe' => $recipe, 'ingredients_to_recipes' => $ingredients_to_recipes]);
+            }else{
+            
+                
+            
+                return redirect()->route('recipe.index')->with('status-warning', 'Ricetta non trovata!');
+            }
     }
 
     /**
@@ -175,7 +177,7 @@ class RecipeController extends Controller
             $ingredients_to_recipes = Recipe::find($id)->ingredient_to_recipes;
             if(Auth::id()==$recipe->user_id || Auth::user()->isAdmin() ){
                 return view('recipe.edit' ,['recipe' => $recipe, 'ingredients_to_recipes' => $ingredients_to_recipes, 'categories' => $categories,
-                    'ingredients' => $ingredients]);
+                'ingredients' => $ingredients]);
             }else{
                 return redirect()->route('recipe.index')->with('status-warning', 'Non hai i permessi per modificare questa ricetta!');
             }
@@ -197,56 +199,56 @@ class RecipeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'title' => 'required | between:3,255 ',
-            'description' => 'required | min:10',
-            'category' => 'required',
-            'difficult' => 'required',
-            'imageToUpload' => 'image|max:400',
+         $this->validate($request, [
+        'title' => 'required | between:3,255 ',
+        'description' => 'required | min:10',
+        'category' => 'required',
+        'difficult' => 'required',
+        'imageToUpload' => 'image|max:400',
         ]);
-
+        
         $recipe = Recipe::find($id);
         if($recipe->user_id == Auth::id() || Auth::user()->isAdmin() ){
             $recipe->title = $request->title;
             $recipe->description = $request->description;
-
-
+            
+           
             $recipe->category_id = $request->category;
-
-
+            
+           
             $recipe->difficult = $request->difficult;
-
+            
             $recipe->save();
             $recipe_id = $recipe->id;
-
+            
             $ingredients = $request->ingredient;
             $ingredients = explode(", ",$ingredients);
             $ingredient_to_recipes = Ingredient_to_recipe::where('recipe_id',$id)->get();
-
+          
             if(($key=array_search("",$ingredients)) != false){
-
-                unset($ingredients[$key]);
-            }
-
+                    
+                          unset($ingredients[$key]);
+                 }
+            
             foreach($ingredient_to_recipes as $ingredient_to_recipe){
-
-
-
+                
+            
+         
                 if(($key=array_search($ingredient_to_recipe->ingredient->name,$ingredients)) !== false){
-
-                    unset($ingredients[$key]);
-                }else{
-                    $destroy_inToRecipe = Ingredient_to_recipe::find($ingredient_to_recipe->id);
-
-                    $destroy_inToRecipe->delete();
+                        
+                          unset($ingredients[$key]);
+                    }else{
+                      $destroy_inToRecipe = Ingredient_to_recipe::find($ingredient_to_recipe->id);
+                    
+                     $destroy_inToRecipe->delete();
                 }
-
-
-
-
+                
+                
+               
+                
             }
-
-
+            
+            
             foreach($ingredients as $ingredient){
                 $ingredient_to_recipe = new Ingredient_to_recipe;
                 if(!empty($ingredient)){
@@ -263,19 +265,19 @@ class RecipeController extends Controller
                     $ingredient_to_recipe->save();
                 }
             }
-
+            
             if ($request->hasFile('imageToUpload')) {
                 if ($request->file('imageToUpload')->isValid()) {
                     if(substr($request->file('imageToUpload')->getMimeType(), 0, 5) == 'image') {
-
-
-                        $destinationPath = 'assets/img/recipe';
-                        $request->file('imageToUpload')->move($destinationPath, $recipe_id.".jpg");
-                        $error_image="";
+       
+    
+                     $destinationPath = 'assets/img/recipe';
+                    $request->file('imageToUpload')->move($destinationPath, $recipe_id.".jpg");
+                    $error_image="";
                     }else{
                         $error_image=" Il file non è un immagine, non è stata caricata!";
                     }
-                }
+                }   
             }
             if(!isset($error_image)){
                 $error_image="";
@@ -283,7 +285,7 @@ class RecipeController extends Controller
             if( Auth::user()->isAdmin() ){
                 return redirect()->route('admin.recipe')->with('status', 'Riccetta Modificata con successo!'.$error_image);
             }else{
-                return redirect()->route('recipe.show',[$id])->with('status', 'Riccetta Modificata con successo!'.$error_image);
+        	    return redirect()->route('recipe.show',[$id])->with('status', 'Riccetta Modificata con successo!'.$error_image);
             }
         }else{
             return redirect()->route('recipe.index')->with('status-warning', 'Non hai i permessi per modificare questa ricetta!');
@@ -302,11 +304,11 @@ class RecipeController extends Controller
         $recipe= Recipe::find($id);
         if($recipe != null){
             $ingredients_to_recipes = Recipe::find($id)->ingredient_to_recipes;
-
+            
             if(Auth::id()==$recipe->user_id || Auth::user()->isAdmin() ){
                 foreach($ingredients_to_recipes as $ingredient_to_recipe ){
                     $destroy_inToRecipe= Ingredient_to_recipe::find($ingredient_to_recipe->id);
-
+                        
                     $destroy_inToRecipe->delete();
                 }
                 if(file_exists('assets/img/recipe/'.$recipe->id.'.jpg')){
@@ -322,11 +324,11 @@ class RecipeController extends Controller
                 return redirect()->route('recipe.index')->with('status-warning', 'Non hai i permessi per eliminare questa ricetta!');
             }
         }else{
-            if( Auth::user()->isAdmin() ){
-                return redirect()->route('admin.recipe')->with('status-warning', 'Ricetta non trovata!');
-            }else{
+             if( Auth::user()->isAdmin() ){
+                 return redirect()->route('admin.recipe')->with('status-warning', 'Ricetta non trovata!');
+             }else{
                 return redirect()->route('recipe.index')->with('status-warning', 'Ricetta non trovata!');
-            }
+             }
         }
     }
 }

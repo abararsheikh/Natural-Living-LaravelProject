@@ -6,13 +6,13 @@
           <thead class="thead-inverse" style="background-color:#373a3c; color:white;">
             <tr>
               <th>#</th>
-              <th>Nome</th>
+              <th>Name</th>
               <th>Email</th>
-              <th>Data</th>
-              <th>Ricette</th>
-              <th>Ruolo</th>
-              <th>Modifica</th>
-              <th>Elimina</th>
+              <th>Date</th>
+              <th>Recipe</th>
+              <th>Role</th>
+              <th>Modify</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -24,12 +24,12 @@
                   <td>{{ date('d-m-Y',strtotime($user->created_at)) }}</td>
                   <td>{{ App\Recipe::where('user_id',$user->id)->count() }}</td>
                   <td>@if( $user->role == 2)
-                        Amministratore
+                        Admin
                        @else
-                        Utente 
+                        User
                        @endif
                </td>
-               <td><a class="btn btn-warning pull" href="{{ route('user.edit', ['id' => $user->id]) }}">Modifica</a></td>
+               <td><a class="btn btn-warning pull" href="{{ route('user.edit', ['id' => $user->id]) }}">Modify</a></td>
                 </tr>
                @endforeach
           </tbody>

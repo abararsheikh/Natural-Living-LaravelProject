@@ -30,7 +30,7 @@ Route::get('bodyData','WeeklyPlanner\bodyDataController@index');
 Route::get('/quotations','WeeklyPlanner\DailyQuoteController@index');
 Route::post('/newBodyData','WeeklyPlanner\bodyDataController@store');
 Route::post('/newBodyMeasureData','WeeklyPlanner\bodyDataController@storeMeasurements');
-<<<<<<< HEAD
+
 
 //Meal Planner Get Code
 Route::get('/mealplanner','WeeklyPlanner\mealController@index');
@@ -64,7 +64,7 @@ Route::post('/lunchAdd','WeeklyPlanner\mealController@storeLunch');
 Route::post('/lunchAdd/{day}','WeeklyPlanner\mealController@storeLunchDay');
 Route::post('/dinnerAdd','WeeklyPlanner\mealController@storeDinner');
 Route::post('/dinnerAdd/{day}','WeeklyPlanner\mealController@storeDinnerDay');
-=======
+
 Route::get('/mealplanner','WeeklyPlanner\mealController@index');
 
 
@@ -131,6 +131,6 @@ Route::group(['middleware' => 'web'], function () {
 
 });
 
->>>>>>> 3a5f7822d0867373b17ee041d6969ac95dcea8f1
+
 
 

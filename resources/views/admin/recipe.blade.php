@@ -6,13 +6,13 @@
           <thead class="thead-inverse" style="background-color:#373a3c; color:white;">
             <tr>
               <th>#</th>
-              <th>Titolo</th>
-              <th>Autore</th>
-              <th>Categoria</th>
-              <th>Ingredienti</th>
-              <th>Data</th>
-              <th>Modifica</th>
-              <th>Elimina</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Ingredients</th>
+              <th>Date</th>
+              <th>Modify</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>

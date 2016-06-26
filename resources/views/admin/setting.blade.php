@@ -18,7 +18,7 @@
             			        @if ($i*3 == $setting->paginate_recipe)
             			        selected
             			        @endif
-            			        >{{ $i*3 }} ricette per pagina</option>
+            			        >{{ $i*3 }} Recipes Per Page</option>
             			     @endfor
             			 </select>
         			 </div>
@@ -30,25 +30,26 @@
             			        @if ($i*5 == $setting->paginate_admin)
             			        selected
             			        @endif
-            			        >{{ $i*5 }} numero di paginazione</option>
+            			        >{{ $i*5 }} number of paging</option>
             			     @endfor
             		 </select>
         			 </div>
         			 <div class="col-sm-12">
-           			 	 <label class="control-label font-15-b" for="theme">Tema utilizzato:</label>
+           			 	 <label class="control-label font-15-b" for="theme">
+							 theme used:</label>
             			 <select id="theme" name="theme" class="form-control">
             			     @for ( $i=1; $i<=3; $i++ )
             			        <option value="{{ $i }}"
             			        @if ($i == $setting->theme)
             			        selected
             			        @endif
-            			        >Tema numero: {{ $i }} </option>
+            			        >theme number: {{ $i }} </option>
             			     @endfor
             		 </select>
         			 </div>
         			 <div class="col-sm-4">
         			     <br>
-        			     {!! Form::submit('Modifica', ['id'=>'modify_user','class' => 'btn btn-primary  ']) !!}
+        			     {!! Form::submit('Modify', ['id'=>'modify_user','class' => 'btn btn-primary  ']) !!}
         			 </div>
         			 <div class="col-sm-6">
         			 	<span class="validate"></span>

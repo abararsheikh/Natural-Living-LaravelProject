@@ -24,21 +24,7 @@
             <span style="background-color: white;"></span>
         </div>
     </div>
-    <div class="container" style="margin-top: 15%;">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-info">
-                    <div class="panel-heading" style="background-color:#E91E63;color: white;">Daily Motivational Quote</div>
-                    <div class="panel-body">
-                        <!--JavaScript code for single Motivational Quote of the Day, http://www.tqpage.com/ from The Quotations Page-->
-                        <script language="javascript" src="http://www.quotationspage.com/data/1mqotd.js">
-                        </script> <!--End JavaScript Quotations code-->
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 </body>
 </html>

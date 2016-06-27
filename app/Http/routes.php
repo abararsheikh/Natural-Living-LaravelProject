@@ -19,6 +19,8 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/parks', 'parkController@index');
+
+//Weekly Planner Routes
 Route::get('/planner','WeeklyPlanner\IndexController@index');
 Route::get('bodyData','WeeklyPlanner\bodyDataController@index');
 Route::get('/quotations','WeeklyPlanner\DailyQuoteController@index');
@@ -60,7 +62,10 @@ Route::post('/dinnerAdd','WeeklyPlanner\mealController@storeDinner');
 Route::post('/dinnerAdd/{day}','WeeklyPlanner\mealController@storeDinnerDay');
 
 Route::get('/mealplanner','WeeklyPlanner\mealController@index');
-
+Route::get('/chart', 'WeeklyPlanner\chartController@displayChart');
+Route::get('/chartCalculations', 'WeeklyPlanner\chartController@chartCalculations');
+Route::get('/chartTotalRows/{day}', 'WeeklyPlanner\chartController@chartTotalCalculation');
+Route::get('/ChartRowsDone/{day}', 'WeeklyPlanner\chartController@chartDoneCalculation');
 
 //recipes blogs routes
 Route::group(['middleware' => 'web'], function () {

@@ -16,7 +16,7 @@
             <li><a href="#"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i> Start Workout</a> </li>
             <li><a href="{{url('bodyData')}}"><i class="fa fa-user fa-2x" aria-hidden="true"></i> Body Data</a> </li>
             <li><a href="{{url('mealplanner')}}"><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i> Plan Your Diet</a> </li>
-            <li><a href="#"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>Statistics</a> </li>
+            <li><a href="{{url('chart')}}"><i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>Statistics</a> </li>
             <li><a href="{{url('quotations')}}"><i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>Daily Quote</a> </li>
         </ul>
         <div id="sidebar-btn">

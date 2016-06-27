@@ -2,13 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f23f2e0-d05c-4bcb-b314-846a2a6ecfec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/mealPlannerJS.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/common/errors.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.codeclimate.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.eslintignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.eslintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.github/ISSUE_TEMPLATE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.github/PULL_REQUEST_TEMPLATE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/config.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/dist/Chart.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/dist/Chart.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/dist/Chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/dist/Chart.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/00-Getting-Started.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/01-Chart-Configuration.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/02-Scales.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/03-Line-Chart.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/04-Bar-Chart.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/05-Radar-Chart.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/06-Polar-Area-Chart.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/07-Pie-Doughnut-Chart.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/08-Bubble-Chart.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/09-Advanced.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/docs/10-Notes.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/karma.conf.ci.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/karma.coverage.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/AnimationCallbacks/progress-bar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/bar-horizontal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/bar-multi-axis.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/bar-stacked.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/bar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/bubble.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/combo-bar-line.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/data_label_combo-bar-line.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/different-point-sizes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/doughnut.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-customTooltips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-legend.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-logarithmic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-multi-axis.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-multiline-labels.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-skip-points.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-stacked-area.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line-x-axis-filter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/line.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/pie-customTooltips.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/pie.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/polar-area.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/radar-skip-points.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/radar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/scatter-logX.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/scatter-multi-axis.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/scatter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/timeScale/combo-time-scale.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/timeScale/line-time-point-data.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/timeScale/line-time-scale.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/samples/tooltip-hooks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/charts/Chart.Bar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/charts/Chart.Bubble.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/charts/Chart.Doughnut.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/charts/Chart.Line.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/charts/Chart.PolarArea.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/charts/Chart.Radar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/charts/Chart.Scatter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/controllers/controller.bar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/controllers/controller.bubble.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/controllers/controller.doughnut.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/controllers/controller.line.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/controllers/controller.polarArea.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/controllers/controller.radar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.animation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.datasetController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.element.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.layoutService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.legend.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.scale.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.scaleService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.title.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/elements/element.arc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/elements/element.line.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/elements/element.point.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/elements/element.rectangle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/scales/scale.category.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/scales/scale.linear.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/scales/scale.linearbase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/scales/scale.logarithmic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/scales/scale.radialLinear.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/scales/scale.time.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/controller.bar.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/controller.bubble.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/controller.doughnut.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/controller.line.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/controller.polarArea.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/controller.radar.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.element.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.helpers.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.layoutService.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.legend.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.plugin.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.scaleService.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.title.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/core.tooltip.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/defaultConfig.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/element.arc.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/element.line.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/element.point.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/element.rectangle.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/mockContext.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/scale.category.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/scale.linear.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/scale.logarithmic.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/scale.radialLinear.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Chart.js/Chart.js-master/test/scale.time.tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/WeeklyPlanner/chartPlanner.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/parks/RecreationLocations.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/mealController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/mealController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/bodyDataController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/bodyDataController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/WeeklyPlanner/bodyData.blade.php" afterPath="$PROJECT_DIR$/resources/views/WeeklyPlanner/bodyData.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/WeeklyPlanner/dailyquote.blade.php" afterPath="$PROJECT_DIR$/resources/views/WeeklyPlanner/dailyquote.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php" afterPath="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php" afterPath="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/WeeklyPlanner/plannerhome.blade.php" afterPath="$PROJECT_DIR$/resources/views/WeeklyPlanner/plannerhome.blade.php" />
     </list>
     <ignored path="Natural-Living.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,34 +161,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="mealController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/mealController.php">
+      <file leaf-file-name="mealPlannerHome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+              <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
               <folding>
-                <element signature="e#53#89#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mealPlannerDay.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mealPlannerDay.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17273796">
-              <caret line="360" column="26" selection-start-line="360" selection-start-column="26" selection-end-line="360" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="317" column="10" selection-start-line="317" selection-start-column="10" selection-end-line="317" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mealPlannerHome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="377" column="0" selection-start-line="377" selection-start-column="0" selection-end-line="377" selection-end-column="0" />
+              <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DailyQuoteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/DailyQuoteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dailyquote.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/dailyquote.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41363102">
+              <caret line="31" column="92" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plannerhome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/plannerhome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="92" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,17 +254,20 @@
       <list>
         <option value="$PROJECT_DIR$/resources/views/parks/parks.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/plannerhome.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/dailyquote.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/bodyData.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/common/errors.blade.php" />
         <option value="$PROJECT_DIR$/app/mealPlannerModel.php" />
         <option value="$PROJECT_DIR$/resources/views/common/errorslunch.blade.php" />
         <option value="$PROJECT_DIR$/public/js/mealPlannerJS.js" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/mealController.php" />
-        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/bodyData.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/chartController.php" />
+        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/chartPlanner.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/bodyDataController.php" />
         <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/plannerhome.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/WeeklyPlanner/dailyquote.blade.php" />
       </list>
     </option>
   </component>
@@ -153,6 +321,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -354,27 +523,26 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Natural-Living-Practice" />
     <property name="js-jscs-nodeInterpreter" value="D:\NodeJS Installed\node.exe" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Natural-Living\public" />
+      <recent name="C:\xampp\htdocs\Natural-Living\resources\views\WeeklyPlanner" />
+      <recent name="C:\xampp\htdocs\Natural-Living\app" />
+      <recent name="C:\xampp\htdocs\Natural-Living\app\Http\Controllers\WeeklyPlanner" />
+      <recent name="C:\xampp\htdocs\Natural-Living\resources\views\parks" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Natural-Living\public" />
       <recent name="C:\xampp\htdocs\Natural-Living\resources\views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Natural-Living\app" />
-      <recent name="C:\xampp\htdocs\Natural-Living\resources\views\WeeklyPlanner" />
-      <recent name="C:\xampp\htdocs\Natural-Living\app\Http\Controllers\WeeklyPlanner" />
-      <recent name="C:\xampp\htdocs\Natural-Living\public" />
-      <recent name="C:\xampp\htdocs\Natural-Living\resources\views\parks" />
     </key>
   </component>
   <component name="RunManager">
@@ -473,33 +641,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/mealController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
           <folding>
-            <element signature="e#53#89#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -507,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,20 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/dailyquote.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33607522">
-          <caret line="16" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/plannerhome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41363102">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/errors/503.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -750,13 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/bodyDataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22444183">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mealPlannerModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23266745">
@@ -778,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/bodyData.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.5840187">
-          <caret line="216" column="14" selection-start-line="216" selection-start-column="14" selection-end-line="216" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/mealPlannerJS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15511164">
@@ -792,10 +906,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/mealController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25851938">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding>
+            <element signature="e#53#89#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/chartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+          <folding>
+            <element signature="e#54#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/chartPlanner.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <folding>
+            <element signature="e#1441#1477#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Chart.js/Chart.js-master/src/core/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49118683">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding>
+            <marker date="1466953260000" expanded="true" signature="3126:3143" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/bodyDataModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23266745">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/bodyDataController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/bodyData.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025851939">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="317" column="10" selection-start-line="317" selection-start-column="10" selection-end-line="317" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/plannerhome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -803,40 +1010,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9482961">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeeklyPlanner/mealController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/dailyquote.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41363102">
+          <caret line="31" column="92" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
           <folding>
-            <element signature="e#53#89#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerHome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="377" column="0" selection-start-line="377" selection-start-column="0" selection-end-line="377" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/WeeklyPlanner/mealPlannerDay.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17273796">
-          <caret line="360" column="26" selection-start-line="360" selection-start-column="26" selection-end-line="360" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,18 @@
+Wed Jun 15 14:30:11.869 Trying to start Windows service 'MongoDB'
+Wed Jun 15 14:30:11.869 Service running
+Wed Jun 15 14:30:12.150 [initandlisten] MongoDB starting : pid=1704 port=27017 dbpath=c:\mongodb\data\db 32-bit host=VALUED-OP3JFZDM
+Wed Jun 15 14:30:12.150 [initandlisten] 
+Wed Jun 15 14:30:12.150 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed Jun 15 14:30:12.150 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed Jun 15 14:30:12.150 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed Jun 15 14:30:12.150 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed Jun 15 14:30:12.150 [initandlisten] 
+Wed Jun 15 14:30:12.150 [initandlisten] db version v2.4.9
+Wed Jun 15 14:30:12.150 [initandlisten] git version: 52fe0d21959e32a5bdbecdc62057db386e4e029c
+Wed Jun 15 14:30:12.150 [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=0, build=6002, platform=2, service_pack='Service Pack 2') BOOST_LIB_VERSION=1_49
+Wed Jun 15 14:30:12.150 [initandlisten] allocator: system
+Wed Jun 15 14:30:12.165 [initandlisten] options: { bind_ip: "127.0.0.1", config: "c:\mongodb\mongod.cfg", dbpath: "c:\mongodb\data\db", logpath: "c:\mongodb\log\mongo.log", port: 27017, service: true }
+Wed Jun 15 14:30:12.914 [initandlisten] waiting for connections on port 27017
+Wed Jun 15 14:30:12.914 [websvr] admin web console waiting for connections on port 28017
+Wed Jun 15 14:31:12.990 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } ntoreturn:0 ntoskip:0 nscanned:1 keyUpdates:0 locks(micros) r:194113 nreturned:0 reslen:20 178ms
+Wed Jun 15 18:55:53.675 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } ntoreturn:0 ntoskip:0 nscanned:1 keyUpdates:0 locks(micros) r:39317 nreturned:0 reslen:20 178845825ms

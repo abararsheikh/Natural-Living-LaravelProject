@@ -1,0 +1,23 @@
+Sat Jun 25 08:59:51.405 Trying to start Windows service 'MongoDB'
+Sat Jun 25 08:59:51.405 Service running
+Sat Jun 25 08:59:52.887 [initandlisten] MongoDB starting : pid=1980 port=27017 dbpath=c:\mongodb\data\db 32-bit host=VALUED-OP3JFZDM
+Sat Jun 25 08:59:52.887 [initandlisten] 
+Sat Jun 25 08:59:52.887 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Sat Jun 25 08:59:52.887 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Sat Jun 25 08:59:52.887 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Sat Jun 25 08:59:52.887 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Sat Jun 25 08:59:52.887 [initandlisten] 
+Sat Jun 25 08:59:52.887 [initandlisten] db version v2.4.9
+Sat Jun 25 08:59:52.887 [initandlisten] git version: 52fe0d21959e32a5bdbecdc62057db386e4e029c
+Sat Jun 25 08:59:52.887 [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=0, build=6002, platform=2, service_pack='Service Pack 2') BOOST_LIB_VERSION=1_49
+Sat Jun 25 08:59:52.887 [initandlisten] allocator: system
+Sat Jun 25 08:59:52.887 [initandlisten] options: { bind_ip: "127.0.0.1", config: "c:\mongodb\mongod.cfg", dbpath: "c:\mongodb\data\db", logpath: "c:\mongodb\log\mongo.log", port: 27017, service: true }
+Sat Jun 25 08:59:54.853 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+Sat Jun 25 08:59:54.853 dbexit: 
+Sat Jun 25 08:59:54.853 [initandlisten] shutdown: going to close listening sockets...
+Sat Jun 25 08:59:54.853 [initandlisten] shutdown: going to flush diaglog...
+Sat Jun 25 08:59:54.853 [initandlisten] shutdown: going to close sockets...
+Sat Jun 25 08:59:54.853 [initandlisten] shutdown: waiting for fs preallocator...
+Sat Jun 25 08:59:54.853 [initandlisten] shutdown: closing all files...
+Sat Jun 25 08:59:54.853 [initandlisten] closeAllFiles() finished
+Sat Jun 25 08:59:54.853 dbexit: really exiting now

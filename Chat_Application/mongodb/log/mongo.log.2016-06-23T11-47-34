@@ -1,0 +1,21 @@
+Wed Jun 22 12:17:42.989 Trying to start Windows service 'MongoDB'
+Wed Jun 22 12:17:43.004 Service running
+Wed Jun 22 12:17:43.067 [initandlisten] MongoDB starting : pid=1692 port=27017 dbpath=c:\mongodb\data\db 32-bit host=VALUED-OP3JFZDM
+Wed Jun 22 12:17:43.067 [initandlisten] 
+Wed Jun 22 12:17:43.067 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Wed Jun 22 12:17:43.067 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Wed Jun 22 12:17:43.067 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Wed Jun 22 12:17:43.067 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Wed Jun 22 12:17:43.067 [initandlisten] 
+Wed Jun 22 12:17:43.067 [initandlisten] db version v2.4.9
+Wed Jun 22 12:17:43.067 [initandlisten] git version: 52fe0d21959e32a5bdbecdc62057db386e4e029c
+Wed Jun 22 12:17:43.067 [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=0, build=6002, platform=2, service_pack='Service Pack 2') BOOST_LIB_VERSION=1_49
+Wed Jun 22 12:17:43.067 [initandlisten] allocator: system
+Wed Jun 22 12:17:43.067 [initandlisten] options: { bind_ip: "127.0.0.1", config: "c:\mongodb\mongod.cfg", dbpath: "c:\mongodb\data\db", logpath: "c:\mongodb\log\mongo.log", port: 27017, service: true }
+Wed Jun 22 12:17:44.705 [websvr] admin web console waiting for connections on port 28017
+Wed Jun 22 12:17:44.705 [initandlisten] waiting for connections on port 27017
+Wed Jun 22 12:18:45.219 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } ntoreturn:0 ntoskip:0 nscanned:1 keyUpdates:0 locks(micros) r:576456 nreturned:0 reslen:20 575ms
+Thu Jun 23 00:36:29.549 [initandlisten] connection accepted from 127.0.0.1:51440 #1 (1 connection now open)
+Thu Jun 23 00:36:57.352 [initandlisten] connection accepted from 127.0.0.1:51441 #2 (2 connections now open)
+Thu Jun 23 00:37:40.253 [conn2] query chat.messages query: { orderby: { created: -1 }, $query: {} } ntoreturn:8 ntoskip:0 nscanned:3 scanAndOrder:1 keyUpdates:0 locks(micros) W:239027 r:81667 nreturned:3 reslen:285 158ms
+Thu Jun 23 07:22:18.980 [TTLMonitor] query local.system.indexes query: { expireAfterSeconds: { $exists: true } } ntoreturn:0 ntoskip:0 nscanned:1 keyUpdates:0 locks(micros) r:3333354 nreturned:0 reslen:20 3333ms

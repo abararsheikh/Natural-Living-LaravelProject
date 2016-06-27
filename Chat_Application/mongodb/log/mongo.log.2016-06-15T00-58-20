@@ -1,0 +1,211 @@
+Tue Jun 14 18:17:13.223 Trying to start Windows service 'MongoDB'
+Tue Jun 14 18:17:13.226 Service running
+Tue Jun 14 18:17:13.233 [initandlisten] MongoDB starting : pid=5908 port=27017 dbpath=c:\mongodb\data\db 32-bit host=VALUED-OP3JFZDM
+Tue Jun 14 18:17:13.233 [initandlisten] 
+Tue Jun 14 18:17:13.233 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Tue Jun 14 18:17:13.233 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Tue Jun 14 18:17:13.233 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Tue Jun 14 18:17:13.233 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Tue Jun 14 18:17:13.233 [initandlisten] 
+Tue Jun 14 18:17:13.233 [initandlisten] db version v2.4.9
+Tue Jun 14 18:17:13.234 [initandlisten] git version: 52fe0d21959e32a5bdbecdc62057db386e4e029c
+Tue Jun 14 18:17:13.234 [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=0, build=6002, platform=2, service_pack='Service Pack 2') BOOST_LIB_VERSION=1_49
+Tue Jun 14 18:17:13.234 [initandlisten] allocator: system
+Tue Jun 14 18:17:13.234 [initandlisten] options: { bind_ip: "127.0.0.1", config: "c:\mongodb\mongod.cfg", dbpath: "c:\mongodb\data\db", logpath: "c:\mongodb\log\mongo.log", port: 27017, service: true }
+Tue Jun 14 18:17:13.293 [websvr] admin web console waiting for connections on port 28017
+Tue Jun 14 18:17:13.293 [initandlisten] waiting for connections on port 27017
+Tue Jun 14 18:21:36.778 [initandlisten] connection accepted from 127.0.0.1:49671 #1 (1 connection now open)
+Tue Jun 14 18:39:43.769 [conn1] end connection 127.0.0.1:49671 (0 connections now open)
+Tue Jun 14 18:47:11.573 [initandlisten] connection accepted from 127.0.0.1:49801 #2 (1 connection now open)
+Tue Jun 14 18:47:11.728 [initandlisten] connection accepted from 127.0.0.1:49802 #3 (2 connections now open)
+Tue Jun 14 18:47:11.915 [conn3] end connection 127.0.0.1:49802 (1 connection now open)
+Tue Jun 14 18:47:11.917 [conn2] end connection 127.0.0.1:49801 (0 connections now open)
+Tue Jun 14 18:47:33.901 [initandlisten] connection accepted from 127.0.0.1:49803 #4 (1 connection now open)
+Tue Jun 14 18:47:33.963 [initandlisten] connection accepted from 127.0.0.1:49804 #5 (2 connections now open)
+Tue Jun 14 18:47:33.995 [conn4] end connection 127.0.0.1:49803 (1 connection now open)
+Tue Jun 14 18:47:33.997 [conn5] end connection 127.0.0.1:49804 (0 connections now open)
+Tue Jun 14 18:47:56.743 [initandlisten] connection accepted from 127.0.0.1:49805 #6 (1 connection now open)
+Tue Jun 14 18:47:56.759 [initandlisten] connection accepted from 127.0.0.1:49806 #7 (2 connections now open)
+Tue Jun 14 18:47:56.816 [conn7] end connection 127.0.0.1:49806 (1 connection now open)
+Tue Jun 14 18:47:56.846 [conn6] end connection 127.0.0.1:49805 (0 connections now open)
+Tue Jun 14 18:48:20.019 [initandlisten] connection accepted from 127.0.0.1:49807 #8 (1 connection now open)
+Tue Jun 14 18:48:20.059 [initandlisten] connection accepted from 127.0.0.1:49808 #9 (2 connections now open)
+Tue Jun 14 18:48:20.151 [conn8] end connection 127.0.0.1:49807 (1 connection now open)
+Tue Jun 14 18:48:20.167 [conn9] end connection 127.0.0.1:49808 (1 connection now open)
+Tue Jun 14 18:48:25.326 [initandlisten] connection accepted from 127.0.0.1:49809 #10 (1 connection now open)
+Tue Jun 14 18:48:25.394 [initandlisten] connection accepted from 127.0.0.1:49810 #11 (2 connections now open)
+Tue Jun 14 18:48:25.414 [conn11] end connection 127.0.0.1:49810 (1 connection now open)
+Tue Jun 14 18:48:25.433 [conn10] end connection 127.0.0.1:49809 (1 connection now open)
+Tue Jun 14 18:48:56.235 [initandlisten] connection accepted from 127.0.0.1:49811 #12 (1 connection now open)
+Tue Jun 14 18:54:42.455 [initandlisten] connection accepted from 127.0.0.1:49821 #13 (2 connections now open)
+Tue Jun 14 18:54:42.527 [initandlisten] connection accepted from 127.0.0.1:49822 #14 (3 connections now open)
+Tue Jun 14 18:54:42.572 [conn14] end connection 127.0.0.1:49822 (2 connections now open)
+Tue Jun 14 18:54:42.584 [conn13] end connection 127.0.0.1:49821 (1 connection now open)
+Tue Jun 14 19:00:11.762 [initandlisten] connection accepted from 127.0.0.1:49836 #15 (2 connections now open)
+Tue Jun 14 19:00:16.605 [conn12] end connection 127.0.0.1:49811 (1 connection now open)
+Tue Jun 14 20:08:29.881 [initandlisten] connection accepted from 127.0.0.1:49975 #16 (2 connections now open)
+Tue Jun 14 20:09:01.770 [FileAllocator] allocating new datafile c:\mongodb\data\db\chat.ns, filling with zeroes...
+Tue Jun 14 20:09:01.786 [FileAllocator] creating directory c:\mongodb\data\db\_tmp
+Tue Jun 14 20:09:02.015 [FileAllocator] done allocating datafile c:\mongodb\data\db\chat.ns, size: 16MB,  took 0.151 secs
+Tue Jun 14 20:09:02.016 [FileAllocator] allocating new datafile c:\mongodb\data\db\chat.0, filling with zeroes...
+Tue Jun 14 20:09:02.167 [FileAllocator] done allocating datafile c:\mongodb\data\db\chat.0, size: 16MB,  took 0.15 secs
+Tue Jun 14 20:09:02.184 [FileAllocator] allocating new datafile c:\mongodb\data\db\chat.1, filling with zeroes...
+Tue Jun 14 20:09:02.262 [conn16] build index chat.messages { _id: 1 }
+Tue Jun 14 20:09:02.304 [conn16] build index done.  scanned 0 total records. 0.042 secs
+Tue Jun 14 20:09:02.319 [conn16] insert chat.messages ninserted:1 keyUpdates:0 locks(micros) w:607957 607ms
+Tue Jun 14 20:09:02.552 [FileAllocator] done allocating datafile c:\mongodb\data\db\chat.1, size: 32MB,  took 0.367 secs
+Tue Jun 14 20:09:17.816 [initandlisten] connection accepted from 127.0.0.1:49989 #17 (3 connections now open)
+Tue Jun 14 20:09:17.903 [initandlisten] connection accepted from 127.0.0.1:49990 #18 (4 connections now open)
+Tue Jun 14 20:09:17.940 [conn17] end connection 127.0.0.1:49989 (3 connections now open)
+Tue Jun 14 20:09:17.947 [conn18] end connection 127.0.0.1:49990 (2 connections now open)
+Tue Jun 14 20:09:31.197 [initandlisten] connection accepted from 127.0.0.1:49991 #19 (3 connections now open)
+Tue Jun 14 20:09:31.218 [initandlisten] connection accepted from 127.0.0.1:49992 #20 (4 connections now open)
+Tue Jun 14 20:09:31.234 [conn20] end connection 127.0.0.1:49992 (3 connections now open)
+Tue Jun 14 20:09:31.251 [conn19] end connection 127.0.0.1:49991 (3 connections now open)
+Tue Jun 14 20:09:35.755 [initandlisten] connection accepted from 127.0.0.1:49993 #21 (3 connections now open)
+Tue Jun 14 20:09:35.770 [initandlisten] connection accepted from 127.0.0.1:49994 #22 (4 connections now open)
+Tue Jun 14 20:09:35.853 [conn21] end connection 127.0.0.1:49993 (3 connections now open)
+Tue Jun 14 20:09:35.861 [conn22] end connection 127.0.0.1:49994 (2 connections now open)
+Tue Jun 14 20:14:26.035 [conn16] end connection 127.0.0.1:49975 (1 connection now open)
+Tue Jun 14 20:14:30.843 [initandlisten] connection accepted from 127.0.0.1:50009 #23 (2 connections now open)
+Tue Jun 14 20:15:20.394 [conn15] end connection 127.0.0.1:49836 (1 connection now open)
+Tue Jun 14 20:15:31.257 [initandlisten] connection accepted from 127.0.0.1:50029 #24 (2 connections now open)
+Tue Jun 14 20:15:31.288 [initandlisten] connection accepted from 127.0.0.1:50030 #25 (3 connections now open)
+Tue Jun 14 20:15:31.304 [conn25] end connection 127.0.0.1:50030 (2 connections now open)
+Tue Jun 14 20:15:31.304 [conn24] end connection 127.0.0.1:50029 (1 connection now open)
+Tue Jun 14 20:15:47.040 [initandlisten] connection accepted from 127.0.0.1:50031 #26 (2 connections now open)
+Tue Jun 14 20:15:47.071 [initandlisten] connection accepted from 127.0.0.1:50032 #27 (3 connections now open)
+Tue Jun 14 20:15:47.071 [conn27] end connection 127.0.0.1:50032 (2 connections now open)
+Tue Jun 14 20:15:47.071 [conn26] end connection 127.0.0.1:50031 (1 connection now open)
+Tue Jun 14 20:15:50.321 [initandlisten] connection accepted from 127.0.0.1:50033 #28 (2 connections now open)
+Tue Jun 14 20:15:50.352 [initandlisten] connection accepted from 127.0.0.1:50034 #29 (3 connections now open)
+Tue Jun 14 20:15:50.368 [conn29] end connection 127.0.0.1:50034 (2 connections now open)
+Tue Jun 14 20:15:50.368 [conn28] end connection 127.0.0.1:50033 (1 connection now open)
+Tue Jun 14 20:51:52.243 [initandlisten] connection accepted from 127.0.0.1:50809 #30 (2 connections now open)
+Tue Jun 14 20:51:52.279 [conn30] end connection 127.0.0.1:50809 (1 connection now open)
+Tue Jun 14 20:51:52.330 [initandlisten] connection accepted from 127.0.0.1:50810 #31 (2 connections now open)
+Tue Jun 14 20:51:52.705 [conn31] query local.system.namespaces query: { name: /^((?!\$).)*$/ } ntoreturn:1000 ntoskip:0 nscanned:1 keyUpdates:0 locks(micros) r:339538 nreturned:1 reslen:114 339ms
+Tue Jun 14 20:51:57.715 [conn31] end connection 127.0.0.1:50810 (1 connection now open)
+Tue Jun 14 20:51:58.752 [initandlisten] connection accepted from 127.0.0.1:50811 #32 (2 connections now open)
+Tue Jun 14 20:52:03.083 [conn32] command admin.$cmd command: { serverStatus: 1 } ntoreturn:1 keyUpdates:0 locks(micros) r:53 reslen:2801 256ms
+Tue Jun 14 20:52:05.283 [conn32] command local.$cmd command: { dbStats: true } ntoreturn:1 keyUpdates:0 locks(micros) r:2059762 reslen:248 2059ms
+Tue Jun 14 20:52:11.798 [conn32] command admin.$cmd command: { serverStatus: 1 } ntoreturn:1 keyUpdates:0 locks(micros) r:40 reslen:2801 118ms
+Tue Jun 14 20:52:23.568 [conn32] end connection 127.0.0.1:50811 (1 connection now open)
+Tue Jun 14 20:52:24.585 [initandlisten] connection accepted from 127.0.0.1:50812 #33 (2 connections now open)
+Tue Jun 14 20:52:29.590 [conn33] end connection 127.0.0.1:50812 (1 connection now open)
+Tue Jun 14 20:52:30.611 [initandlisten] connection accepted from 127.0.0.1:50813 #34 (2 connections now open)
+Tue Jun 14 20:52:49.697 [conn34] end connection 127.0.0.1:50813 (1 connection now open)
+Tue Jun 14 20:52:50.713 [initandlisten] connection accepted from 127.0.0.1:50814 #35 (2 connections now open)
+Tue Jun 14 20:52:59.099 [conn35] end connection 127.0.0.1:50814 (1 connection now open)
+Tue Jun 14 20:53:00.110 [initandlisten] connection accepted from 127.0.0.1:50819 #36 (2 connections now open)
+Tue Jun 14 20:53:05.123 [conn36] end connection 127.0.0.1:50819 (1 connection now open)
+Tue Jun 14 20:53:06.125 [initandlisten] connection accepted from 127.0.0.1:50820 #37 (2 connections now open)
+Tue Jun 14 20:53:11.144 [conn37] end connection 127.0.0.1:50820 (1 connection now open)
+Tue Jun 14 20:53:12.175 [initandlisten] connection accepted from 127.0.0.1:50821 #38 (2 connections now open)
+Tue Jun 14 20:53:17.175 [conn38] end connection 127.0.0.1:50821 (1 connection now open)
+Tue Jun 14 20:53:18.194 [initandlisten] connection accepted from 127.0.0.1:50822 #39 (2 connections now open)
+Tue Jun 14 20:53:23.190 [conn39] end connection 127.0.0.1:50822 (1 connection now open)
+Tue Jun 14 20:53:24.240 [initandlisten] connection accepted from 127.0.0.1:50823 #40 (2 connections now open)
+Tue Jun 14 20:53:29.246 [conn40] end connection 127.0.0.1:50823 (1 connection now open)
+Tue Jun 14 20:53:30.259 [initandlisten] connection accepted from 127.0.0.1:50824 #41 (2 connections now open)
+Tue Jun 14 20:53:35.276 [conn41] end connection 127.0.0.1:50824 (1 connection now open)
+Tue Jun 14 20:53:36.293 [initandlisten] connection accepted from 127.0.0.1:50825 #42 (2 connections now open)
+Tue Jun 14 20:53:41.297 [conn42] end connection 127.0.0.1:50825 (1 connection now open)
+Tue Jun 14 20:53:42.311 [initandlisten] connection accepted from 127.0.0.1:50826 #43 (2 connections now open)
+Tue Jun 14 20:53:47.307 [conn43] end connection 127.0.0.1:50826 (1 connection now open)
+Tue Jun 14 20:53:48.335 [initandlisten] connection accepted from 127.0.0.1:50827 #44 (2 connections now open)
+Tue Jun 14 20:53:52.191 [conn23] end connection 127.0.0.1:50009 (1 connection now open)
+Tue Jun 14 20:53:53.332 [conn44] end connection 127.0.0.1:50827 (0 connections now open)
+Tue Jun 14 20:53:54.351 [initandlisten] connection accepted from 127.0.0.1:50831 #45 (1 connection now open)
+Tue Jun 14 20:53:59.236 [initandlisten] connection accepted from 127.0.0.1:50838 #46 (2 connections now open)
+Tue Jun 14 20:53:59.377 [conn45] end connection 127.0.0.1:50831 (1 connection now open)
+Tue Jun 14 20:54:00.377 [initandlisten] connection accepted from 127.0.0.1:50842 #47 (2 connections now open)
+Tue Jun 14 20:54:05.375 [conn47] end connection 127.0.0.1:50842 (1 connection now open)
+Tue Jun 14 20:54:06.389 [initandlisten] connection accepted from 127.0.0.1:50843 #48 (2 connections now open)
+Tue Jun 14 20:54:11.399 [conn48] end connection 127.0.0.1:50843 (1 connection now open)
+Tue Jun 14 20:54:12.423 [initandlisten] connection accepted from 127.0.0.1:50844 #49 (2 connections now open)
+Tue Jun 14 20:54:17.427 [conn49] end connection 127.0.0.1:50844 (1 connection now open)
+Tue Jun 14 20:54:18.511 [initandlisten] connection accepted from 127.0.0.1:50845 #50 (2 connections now open)
+Tue Jun 14 20:54:23.515 [conn50] end connection 127.0.0.1:50845 (1 connection now open)
+Tue Jun 14 20:54:24.536 [initandlisten] connection accepted from 127.0.0.1:50846 #51 (2 connections now open)
+Tue Jun 14 20:54:29.587 [conn51] end connection 127.0.0.1:50846 (1 connection now open)
+Tue Jun 14 20:54:30.862 [initandlisten] connection accepted from 127.0.0.1:50857 #52 (2 connections now open)
+Tue Jun 14 20:54:35.812 [conn52] end connection 127.0.0.1:50857 (1 connection now open)
+Tue Jun 14 20:54:36.826 [initandlisten] connection accepted from 127.0.0.1:50859 #53 (2 connections now open)
+Tue Jun 14 20:54:41.844 [conn53] end connection 127.0.0.1:50859 (1 connection now open)
+Tue Jun 14 20:54:42.851 [initandlisten] connection accepted from 127.0.0.1:50860 #54 (2 connections now open)
+Tue Jun 14 20:54:47.858 [conn54] end connection 127.0.0.1:50860 (1 connection now open)
+Tue Jun 14 20:54:48.872 [initandlisten] connection accepted from 127.0.0.1:50862 #55 (2 connections now open)
+Tue Jun 14 20:54:53.886 [conn55] end connection 127.0.0.1:50862 (1 connection now open)
+Tue Jun 14 20:54:54.891 [initandlisten] connection accepted from 127.0.0.1:50863 #56 (2 connections now open)
+Tue Jun 14 20:54:59.931 [conn56] end connection 127.0.0.1:50863 (1 connection now open)
+Tue Jun 14 20:55:00.945 [initandlisten] connection accepted from 127.0.0.1:50864 #57 (2 connections now open)
+Tue Jun 14 20:55:05.948 [conn57] end connection 127.0.0.1:50864 (1 connection now open)
+Tue Jun 14 20:55:06.969 [initandlisten] connection accepted from 127.0.0.1:50865 #58 (2 connections now open)
+Tue Jun 14 20:55:12.031 [conn58] end connection 127.0.0.1:50865 (1 connection now open)
+Tue Jun 14 20:55:12.983 [conn46] build index local.messages { _id: 1 }
+Tue Jun 14 20:55:13.064 [initandlisten] connection accepted from 127.0.0.1:50873 #59 (2 connections now open)
+Tue Jun 14 20:55:13.162 [conn46] build index done.  scanned 0 total records. 0.147 secs
+Tue Jun 14 20:55:13.162 [conn46] insert local.messages ninserted:1 keyUpdates:0 locks(micros) w:245165 245ms
+Tue Jun 14 20:55:18.090 [conn59] end connection 127.0.0.1:50873 (1 connection now open)
+Tue Jun 14 20:55:19.187 [initandlisten] connection accepted from 127.0.0.1:50894 #60 (2 connections now open)
+Tue Jun 14 20:55:24.204 [conn60] end connection 127.0.0.1:50894 (1 connection now open)
+Tue Jun 14 20:55:25.218 [initandlisten] connection accepted from 127.0.0.1:50896 #61 (2 connections now open)
+Tue Jun 14 20:55:30.233 [conn61] end connection 127.0.0.1:50896 (1 connection now open)
+Tue Jun 14 20:55:31.246 [initandlisten] connection accepted from 127.0.0.1:50898 #62 (2 connections now open)
+Tue Jun 14 20:55:32.852 [initandlisten] connection accepted from 127.0.0.1:50899 #63 (3 connections now open)
+Tue Jun 14 20:55:32.883 [initandlisten] connection accepted from 127.0.0.1:50900 #64 (4 connections now open)
+Tue Jun 14 20:55:32.930 [conn64] end connection 127.0.0.1:50900 (3 connections now open)
+Tue Jun 14 20:55:32.930 [conn63] end connection 127.0.0.1:50899 (3 connections now open)
+Tue Jun 14 20:55:36.250 [conn62] end connection 127.0.0.1:50898 (1 connection now open)
+Tue Jun 14 20:55:37.258 [initandlisten] connection accepted from 127.0.0.1:50901 #65 (2 connections now open)
+Tue Jun 14 20:55:42.272 [conn65] end connection 127.0.0.1:50901 (1 connection now open)
+Tue Jun 14 20:55:43.285 [initandlisten] connection accepted from 127.0.0.1:50902 #66 (2 connections now open)
+Tue Jun 14 20:55:48.306 [conn66] end connection 127.0.0.1:50902 (1 connection now open)
+Tue Jun 14 20:55:49.317 [initandlisten] connection accepted from 127.0.0.1:50903 #67 (2 connections now open)
+Tue Jun 14 20:55:54.341 [conn67] end connection 127.0.0.1:50903 (1 connection now open)
+Tue Jun 14 20:55:55.357 [initandlisten] connection accepted from 127.0.0.1:50904 #68 (2 connections now open)
+Tue Jun 14 20:56:00.376 [conn68] end connection 127.0.0.1:50904 (1 connection now open)
+Tue Jun 14 20:56:01.377 [initandlisten] connection accepted from 127.0.0.1:50905 #69 (2 connections now open)
+Tue Jun 14 20:56:06.383 [conn69] end connection 127.0.0.1:50905 (1 connection now open)
+Tue Jun 14 20:56:07.405 [initandlisten] connection accepted from 127.0.0.1:50906 #70 (2 connections now open)
+Tue Jun 14 20:56:12.419 [conn70] end connection 127.0.0.1:50906 (1 connection now open)
+Tue Jun 14 20:56:13.428 [initandlisten] connection accepted from 127.0.0.1:50907 #71 (2 connections now open)
+Tue Jun 14 20:56:18.434 [conn71] end connection 127.0.0.1:50907 (1 connection now open)
+Tue Jun 14 20:56:19.452 [initandlisten] connection accepted from 127.0.0.1:50908 #72 (2 connections now open)
+Tue Jun 14 20:56:24.461 [conn72] end connection 127.0.0.1:50908 (1 connection now open)
+Tue Jun 14 20:56:25.462 [initandlisten] connection accepted from 127.0.0.1:50909 #73 (2 connections now open)
+Tue Jun 14 20:56:30.476 [conn73] end connection 127.0.0.1:50909 (1 connection now open)
+Tue Jun 14 20:56:31.484 [initandlisten] connection accepted from 127.0.0.1:50911 #74 (2 connections now open)
+Tue Jun 14 20:56:36.504 [conn74] end connection 127.0.0.1:50911 (1 connection now open)
+Tue Jun 14 20:56:37.506 [initandlisten] connection accepted from 127.0.0.1:50912 #75 (2 connections now open)
+Tue Jun 14 20:56:42.523 [conn75] end connection 127.0.0.1:50912 (1 connection now open)
+Tue Jun 14 20:56:43.541 [initandlisten] connection accepted from 127.0.0.1:50913 #76 (2 connections now open)
+Tue Jun 14 20:57:33.546 [conn76] end connection 127.0.0.1:50913 (1 connection now open)
+Tue Jun 14 20:57:37.106 [initandlisten] connection accepted from 127.0.0.1:50914 #77 (2 connections now open)
+Tue Jun 14 20:57:39.570 [conn77] end connection 127.0.0.1:50914 (1 connection now open)
+Tue Jun 14 20:57:40.579 [initandlisten] connection accepted from 127.0.0.1:50918 #78 (2 connections now open)
+Tue Jun 14 20:57:45.664 [conn78] end connection 127.0.0.1:50918 (1 connection now open)
+Tue Jun 14 20:57:46.693 [initandlisten] connection accepted from 127.0.0.1:50922 #79 (2 connections now open)
+Tue Jun 14 20:57:51.722 [conn79] end connection 127.0.0.1:50922 (1 connection now open)
+Tue Jun 14 20:57:52.743 [initandlisten] connection accepted from 127.0.0.1:50925 #80 (2 connections now open)
+Tue Jun 14 20:57:57.739 [conn80] end connection 127.0.0.1:50925 (1 connection now open)
+Tue Jun 14 20:57:58.761 [initandlisten] connection accepted from 127.0.0.1:50926 #81 (2 connections now open)
+Tue Jun 14 20:58:03.770 [conn81] end connection 127.0.0.1:50926 (1 connection now open)
+Tue Jun 14 20:58:04.785 [initandlisten] connection accepted from 127.0.0.1:50929 #82 (2 connections now open)
+Tue Jun 14 20:58:08.883 [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+Tue Jun 14 20:58:08.945 [serviceShutdown] now exiting
+Tue Jun 14 20:58:08.945 dbexit: 
+Tue Jun 14 20:58:08.945 [serviceShutdown] shutdown: going to close listening sockets...
+Tue Jun 14 20:58:08.945 [serviceShutdown] closing listening socket: 548
+Tue Jun 14 20:58:08.945 [serviceShutdown] closing listening socket: 552
+Tue Jun 14 20:58:08.945 [serviceShutdown] shutdown: going to flush diaglog...
+Tue Jun 14 20:58:08.945 [serviceShutdown] shutdown: going to close sockets...
+Tue Jun 14 20:58:08.945 [serviceShutdown] shutdown: waiting for fs preallocator...
+Tue Jun 14 20:58:08.945 [conn46] end connection 127.0.0.1:50838 (1 connection now open)
+Tue Jun 14 20:58:08.945 [conn82] end connection 127.0.0.1:50929 (1 connection now open)
+Tue Jun 14 20:58:08.945 [serviceShutdown] shutdown: closing all files...
+Tue Jun 14 20:58:08.961 [serviceShutdown] closeAllFiles() finished
+Tue Jun 14 20:58:08.961 [serviceShutdown] shutdown: removing fs lock...
+Tue Jun 14 20:58:08.961 [initandlisten] now exiting
+Tue Jun 14 20:58:08.961 dbexit: ; exiting immediately

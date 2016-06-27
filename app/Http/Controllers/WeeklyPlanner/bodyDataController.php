@@ -9,13 +9,22 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
 
 class bodyDataController extends Controller
 {
     public function index()
     {
-        $bodyMeasurerows = BodyMeasureModel::all();
-        $bodyDatarows = bodyDataModel::all();
+        $bodyDatarows = DB::table('bodydatatbl')
+            ->where('user_Id', Auth::id())
+            ->orderBy('date_Created', 'desc')
+            ->get();
+        $bodyMeasurerows = DB::table('bodymeasurementtbl')
+            ->where('user_Id', Auth::id())
+            ->orderBy('date_Created', 'desc')
+            ->get();
+
         return View('WeeklyPlanner.bodyData')->with('rowsbm',$bodyMeasurerows)->with('rowsbd',$bodyDatarows);
     }
     public function store(Request $request)

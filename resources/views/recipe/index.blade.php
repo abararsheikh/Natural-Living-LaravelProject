@@ -41,7 +41,7 @@
                                 @endif
                                 
                                 <h4 class="media-heading"> {{ $recipe->title }}</h4>
-                                <div class="text-left">Categories: {{ ucfirst($recipe->category->name) }}</div><div class="text-right">Autore: {{ $recipe->user->name }}</div><br>
+                                <div class="text-left">Categories: {{ ucfirst($recipe->category->name) }}</div><div class="text-right">Author: {{ $recipe->user->name }}</div><br>
                                <div class="description-box">
                                 
                                     {{ str_limit( $recipe->description, 320, $end= '...' ) }}

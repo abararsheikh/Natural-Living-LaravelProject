@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Parks and Recreation Facilities</div>
                 <div class="panel-body">
-                    <input id="facility" type="text" />
+                    <input id="facility" type="text" placeholder="Parks , Recreation Facilities , Recreation Centers"/>
                 </div>
             </div>
         </div>
@@ -32,28 +32,44 @@
         overflow:scroll;
         height: 600px;
     }
+    #facility{
+        width:50%;
+    }
 </style>
-
-
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
+    var typingTimer;                //timer identifier
+    var doneTypingInterval = 2000;  //time in ms, 5 second for example
     var myLatLng=[];
     var infolocation=[];
     function update(mylat){
         myLatLng=mylat;
     }
     $(document).ready(function() {
-        $('#facility').change(function(){
+
+//on keyup, start the countdown
+        $('#facility').on('keyup', function () {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        });
+//on keydown, clear the countdown
+        $('#facility').on('keydown', function () {
+            clearTimeout(typingTimer);
+        });
+
+//user is "finished typing," do something
+        function doneTyping () {
             var myLatLng1=[];
             var result="";
             var fac=$('#facility').val();
-// if(fac!=""){
             $.get( "RecreationLocations.xml", function(data) {
                 $(data).find('Location').each(function() {
                     var location=$(this);
-// location.find('LocationName').each(function(){
                     var facility=location.find('LocationName');
-                    if(facility.text()===fac){
+                    if (fac == fac.toLowerCase() || fac[0] === fac[0].toUpperCase()){
+                        facUP=fac.toUpperCase();
+                    }
+                    if(facility.text().search(facUP)!=-1){
                         location.children().each(function(){
                             if($(this).prop("tagName")=='Address'){
                                 var address=$(this).text().trim();
@@ -61,29 +77,58 @@
                                 var GoogleMapAPI = "https://maps.googleapis.com/maps/api/geocode/json";
                                 $.getJSON(GoogleMapAPI,{address: address,key:"AIzaSyDonA-uL5xYVbfsk9usZf3DC7zRR0UyMqA"},
                                     function(data){
-//alert('test');
                                         var mylatLng1=[];
                                         myLatLng1.push(data.results[0].geometry.location);
                                         update(myLatLng1);
-                                        console.log(myLatLng1);
+                                        // console.log(myLatLng1);
                                         initMap();
                                     }); // end getJSON
                             }
-//if($(this).text()!="" && ($(this).prop("tagName")!='LocationID') && ($(this).prop("tagName")!='Address')&& ($(this).prop("tagName")!='parent_page_2')&& ($(this).prop("tagName")!='facility')&& ($(this).prop("tagName")!='ADDRESS_POINT_ID')){
                             result+="<b>"+$(this).prop("tagName")+" : </b>"+$(this).text()+"<br/>";
-//}
                         });
                         result+="<hr/>";
                     }
-// })
-//initMap();
-                });
-                $("#result").html(result);
+                    else{
+                        var facilities=location.find('Facilities');
+                        facilities.find('Facility').each(function(){
+                            var facility=$(this);
+                            if(fac[0] === fac[0].toLowerCase()){
+                                fac = fac.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+                                    return letter.toUpperCase();
+                                });
+                                //alert(fac);
+                            }
+                            if(facility.find('FacilityDisplayName').text().search(fac)!=-1){
+                                location.children().each(function(){
+                                    if($(this).prop("tagName")=='Address'){
+                                        var address=$(this).text().trim();
+                                        address+=", Toronto, ON, Canada";
+                                        var GoogleMapAPI = "https://maps.googleapis.com/maps/api/geocode/json";
+                                        $.getJSON(GoogleMapAPI,{address: address,key:"AIzaSyDonA-uL5xYVbfsk9usZf3DC7zRR0UyMqA"},
+                                            function(data){
+                                                var mylatLng1=[];
+                                                myLatLng1.push(data.results[0].geometry.location);
+                                                update(myLatLng1);
+                                                // console.log(myLatLng1);
+                                                initMap();
+                                            }); // end getJSON
+                                    }
+                                    result+="<b>"+$(this).prop("tagName")+" : </b>"+$(this).text()+"<br/>";
+                                });
+                                result+="<hr/>";
+                            }
+                        });
+                    }
+                    $("#result").html(result);
 
-            }, "xml");
-// }
-        });
-    });
+                }, "xml");
+            });
+        }
+
+      //  $('#facility').change(function(){
+
+   // });
+});
     function initMap() {
         var infor="hhhhhh";
         var map = new google.maps.Map(document.getElementById('map'), {

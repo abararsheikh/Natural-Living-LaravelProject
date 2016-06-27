@@ -72,7 +72,7 @@ Route::group(['middleware' => 'web'], function () {
 
 
     Route::get('/home', 'HomeController@index');
-    Route::get('/recipes', ['as'=>'recipe.index','uses'=>'RecipeController@index']);
+    Route::get('/recipe', ['as'=>'recipe.index','uses'=>'RecipeController@index']);
 
 
 

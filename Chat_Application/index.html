@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        body
+        {
+            margin-top:30px;
+        }
+        #messageArea
+        {
+            display: none;
+        }
+        #chat{
+            border: 1px solid black;
+            height: 320px;
+            margin-bottom: 8px;
+            overflow: scroll;
+            padding: 5px;
+        }
+        .well
+        {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="userFormArea" class="row">
+        <div class="col-md-3 col-md-offset-4" style="margin-top: 40px;">
+            <form id ="userForm">
+                <div class="form-group">
+                    <label>Enter Your Name</label>
+                    <input class="form-control" id="username" />
+                    <br/>
+                    <input type="submit" class="btn btn-primary" value="Login" id="login"/>
+                    <div>
+                        <h4 id="LoginReq" style="color:red;"></h4>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        <div id = "messageArea" class="row">
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Online Users</h3>
+                    <ul class="list-group" id="users">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Chat Message Module</div>
+                    <div class="panel-body">
+
+                        <div class="chat" id="chat"></div>
+
+                        <form id ="messageForm">
+                            <div class="form-group">
+                                <label>Enter Message</label>
+                                <textarea class="form-control" id="message" placeholder="Type here..."></textarea>
+                                <br/>
+                                <input type="submit" class="btn btn-primary" value="Send Message" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+<script>
+    $(function(){
+        var socket = io.connect();
+        var $messageForm = $('#messageForm');
+        var $message = $('#message');
+        var $chat = $('#chat');
+
+        //user Login Detail
+        var $messageArea = $('#messageArea');
+        var $userFormArea = $('#userFormArea');
+        var $userForm = $('#userForm');
+        var $users = $('#users');
+        var $username = $('#username');
+
+        $messageForm.submit(function(e)
+        {
+            e.preventDefault();
+           // console.log('Submitted');
+            socket.emit('send message',$message.val());
+            $message.val('');
+        });
+
+        socket.on('new message', function(data){
+            // $chat.append('<div class="well"><strong>'+data.user+'</strong>: '+data.msg+'</div>');
+            displayMsg(data);
+
+            //whenever recieve a new msg window is scroll-down to latest browser
+            $('.chat').animate({scrollTop: $('.chat').prop("scrollHeight")}, 500);
+        });
+
+        //changing the above line to function //:: MongooseDB retrieve messages
+        function displayMsg(data)
+        {
+            var $usernameDiv = $('<span class="well">')
+                    .text(data.user)
+                    .css('color', getUsernameColor(data.user));
+            var $messageBodyDiv = $('<div class="well">')
+                    .text(data.msg);
+            $chat.append($usernameDiv,$messageBodyDiv);
+
+        }
+        $userForm.submit(function(e)
+        {
+            if($username.val() != '')
+            {
+                e.preventDefault();
+                socket.emit('new user',$username.val(),function(data)
+                {
+                    if(data)
+                    {
+                        $userFormArea.hide();
+                        $messageArea.show();
+                    }
+                });
+                $username.val('');
+            }
+            else
+            {
+                $("#LoginReq").html("Please Enter Your Name!");
+
+            }
+        });
+
+    //===Mongooes==display old messages here
+        socket.on('load old msgs',function(docs){
+            for(var i = docs.length-1; i >= 0 ;i--)
+            {
+                displayMsg(docs[i]);
+            }
+        });
+    //===Mongooes==
+
+        socket.on('get users',function(data)
+        {
+            var html ='';
+            for(var i=0;i < data.length;i++)
+            {
+                html += '<li class="list-group-item">'+data[i]+'</li>';
+            }
+            $users.html(html);
+        });
+
+        //Display User with colors :
+
+        //alert('hello');
+        var FADE_TYPE = 150 ; //  ms
+        var TYPING_TIMER_LENGTH = 400; // ms
+        var COLORS = [
+            '#e21400', '#91580f', '#f8a700', '#f78b00',
+            '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
+            '#3b88eb', '#3824aa', '#a700ff', '#d300e7'
+        ];
+        // Initialize variables
+        var $window = $(window);
+        // var $usernameInput = $('#username');  // Input for username
+        // var $messages = $('#chat'); // Messages area ..where messages are displayed
+        // var $inputMessage = $('#message'); // Input message input box .where we enter the message and click on send button
+
+        // Prompt for setting a username
+        var username;
+        var connected = false;
+        var typing = false;
+        var lastTypingTime;
+        var $currentInput = $username.focus();
+
+        // Gets the color of a username through our hash function
+        function getUsernameColor(user) {
+            // Compute hash code
+            var hash = 7;
+            for (var i = 0; i < user.length; i++) {
+                hash = user.charCodeAt(i) + (hash << 5) - hash;
+            }
+            // Calculate color
+            var index = Math.abs(hash % COLORS.length);
+            return COLORS[index];
+        }
+
+    });
+
+</script>
+</body>
+</html>
+

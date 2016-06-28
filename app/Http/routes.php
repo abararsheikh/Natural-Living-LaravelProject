@@ -130,5 +130,36 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 
+// forum 
+
+Route::get('/forum','ForumController@index');
+Route::get('/forum/create', 'ForumController@create');
+Route::post('/forum', 'ForumController@store');
+
+Route::get('/forum/checkpassword/{id}', 'ForumController@pwd');
+Route::post('/forum/checkpassword/{id}', 'ForumController@pwd2');
+
+Route::get('/forum/checkpassword2/{id}', 'ForumController@pwd4');
+Route::post('/forum/checkpassword2/{id}', 'ForumController@pwd3');
+
+Route::post('/forum/edit/{id}', 'ForumController@update');
+
+
+
+Route::get('/thread/{id}','ThreadController@index');
+
+Route::get('/thread/create/{forumid}', 'ThreadController@create');
+Route::post('/thread/create/{forumid}', 'ThreadController@store');
+
+Route::get('/thread/show/{threadid}', 'ThreadController@show');
+
+Route::get('/thread/checkpwd01/{threadid}', 'ThreadController@pwdcheckforedit');
+Route::post('/thread/checkpwd01/{threadid}', 'ThreadController@pwdcheckforedit2');
+
+Route::post('/thread/edit/{threadid}', 'ThreadController@update');
+
+Route::get('/thread/checkpwd02/{id}', 'ThreadController@pwdcheckfordelete');
+Route::post('/thread/checkpwd02/{id}', 'ThreadController@pwdcheckfordelete2');
+
 
 

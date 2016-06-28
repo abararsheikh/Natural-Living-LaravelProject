@@ -51,6 +51,7 @@
                     <li><a href="{{ url('/parks') }}">Parks</a></li>
                     <li><a href="{{ url('/planner') }}">Weekly Planner</a></li>
                     <li><a href="{{ url('/recipe') }}">Recipes</a></li>
+                    <li><a href="{{ url('/forum') }}">Discussion Board</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

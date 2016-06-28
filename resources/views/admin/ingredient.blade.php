@@ -37,7 +37,7 @@
 				{!! Form::open(['method'=>'POST','id'=>'ingredient_create_form', 'name'=>'create_ingredient','route' => array('ingredient.store'),'enctype' => 'multipart/form-data']) !!}
        			 <div class="form-group col-sm-4">
        			     <div class="col-sm-12">
-           			 	 <label class="control-label font-15-b" for="title">Nome: </label>
+           			 	 <label class="control-label font-15-b" for="title">Name: </label>
             			 <input type="text" class="form-control"  name="name"  placeholder="Name" required><br>
         			 </div>
         			

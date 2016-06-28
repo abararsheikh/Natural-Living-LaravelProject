@@ -121,7 +121,7 @@ class RecipeController extends Controller
                 $request->file('imageToUpload')->move($destinationPath, $recipe_id.".jpg");
                 $error_image="";
                 }else{
-                    $error_image=" Il file non è un immagine, non è stata caricata!";
+                    $error_image=" Some error while uploading the file.";
                 }
             }   
         }
@@ -131,11 +131,11 @@ class RecipeController extends Controller
      
         if(Auth::user()->isAdmin()){
             
-            return redirect()->route('recipe.show',[$recipe_id])->with('status', 'Riccetta Aggiunta!'.$error_image);
+            return redirect()->route('recipe.show',[$recipe_id])->with('status', 'Add Recipe'.$error_image);
             
         }else{
             
-    	    return redirect()->route('recipe.show',[$recipe_id])->with('status', 'Riccetta Aggiunta!'.$error_image);
+    	    return redirect()->route('recipe.show',[$recipe_id])->with('status', 'Add Recipe'.$error_image);
     	
         }
     }
@@ -158,7 +158,7 @@ class RecipeController extends Controller
             
                 
             
-                return redirect()->route('recipe.index')->with('status-warning', 'Ricetta non trovata!');
+                return redirect()->route('recipe.index')->with('status-warning', 'no recipe found');
             }
     }
 
@@ -179,13 +179,13 @@ class RecipeController extends Controller
                 return view('recipe.edit' ,['recipe' => $recipe, 'ingredients_to_recipes' => $ingredients_to_recipes, 'categories' => $categories,
                 'ingredients' => $ingredients]);
             }else{
-                return redirect()->route('recipe.index')->with('status-warning', 'Non hai i permessi per modificare questa ricetta!');
+                return redirect()->route('recipe.index')->with('status-warning', 'You are not allowed to edit this recipe');
             }
         }else{
             if( Auth::user()->isAdmin() ){
-                return redirect()->route('admin.index')->with('status-warning', 'Ricetta non trovata!');
+                return redirect()->route('admin.index')->with('status-warning', 'no recipe found');
             }else{
-                return redirect()->route('recipe.index')->with('status-warning', 'Ricetta non trovata!');
+                return redirect()->route('recipe.index')->with('status-warning', 'no recipe found');
             }
         }
     }
@@ -275,7 +275,7 @@ class RecipeController extends Controller
                     $request->file('imageToUpload')->move($destinationPath, $recipe_id.".jpg");
                     $error_image="";
                     }else{
-                        $error_image=" Il file non è un immagine, non è stata caricata!";
+                        $error_image="The file is not an image, it is not loaded !";
                     }
                 }   
             }
@@ -283,12 +283,12 @@ class RecipeController extends Controller
                 $error_image="";
             }
             if( Auth::user()->isAdmin() ){
-                return redirect()->route('admin.recipe')->with('status', 'Riccetta Modificata con successo!'.$error_image);
+                return redirect()->route('admin.recipe')->with('status', 'Recipe modified'.$error_image);
             }else{
-        	    return redirect()->route('recipe.show',[$id])->with('status', 'Riccetta Modificata con successo!'.$error_image);
+        	    return redirect()->route('recipe.show',[$id])->with('status', 'Recipe modified'.$error_image);
             }
         }else{
-            return redirect()->route('recipe.index')->with('status-warning', 'Non hai i permessi per modificare questa ricetta!');
+            return redirect()->route('recipe.index')->with('status-warning', 'You are not allowed to edit this recipe');
         }
     }
 
@@ -316,18 +316,18 @@ class RecipeController extends Controller
                 }
                 $recipe->delete();
                 if( Auth::user()->isAdmin() ){
-                    return redirect()->route('admin.recipe')->with('status', 'Hai eliminato la riccetta con successo!');
+                    return redirect()->route('admin.recipe')->with('status', 'Recipe Deleted');
                 }else{
-                    return redirect()->route('recipe.index')->with('status', 'Hai eliminato la riccetta con successo!');
+                    return redirect()->route('recipe.index')->with('status', 'Recipe Deleted');
                 }
             }else{
-                return redirect()->route('recipe.index')->with('status-warning', 'Non hai i permessi per eliminare questa ricetta!');
+                return redirect()->route('recipe.index')->with('status-warning', 'Not allowed to delete');
             }
         }else{
              if( Auth::user()->isAdmin() ){
-                 return redirect()->route('admin.recipe')->with('status-warning', 'Ricetta non trovata!');
+                 return redirect()->route('admin.recipe')->with('status-warning', 'Recipe Deleted');
              }else{
-                return redirect()->route('recipe.index')->with('status-warning', 'Ricetta non trovata!');
+                return redirect()->route('recipe.index')->with('status-warning', 'Recipe Deleted');
              }
         }
     }

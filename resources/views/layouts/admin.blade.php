@@ -157,26 +157,26 @@
                         <a href="{{ route('admin.index') }}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li {{{ (Request::is('admin/recipe') ? 'class=active' : '') }}} >
-                        <a href="{{route('admin.recipe') }}"><i class="fa fa-fw fa-cutlery"></i> Ricette</a>
+                        <a href="{{route('admin.recipe') }}"><i class="fa fa-fw fa-cutlery"></i> Recipes</a>
                     </li>
                     <li {{{ (Request::is('admin/ingredient') ? 'class=active' : '') }}} >
-                        <a href="{{ route('admin.ingredient') }}"><i class="fa fa-fw fa-shopping-cart"></i> Ingredienti</a>
+                        <a href="{{ route('admin.ingredient') }}"><i class="fa fa-fw fa-shopping-cart"></i> Ingredients</a>
                     </li>
                     <li {{{ (Request::is('admin/user') ? 'class=active' : '') }}} >
-                        <a href="{{ route('admin.user') }}"><i class="fa fa-fw fa-users"></i> Utenti</a>
+                        <a href="{{ route('admin.user') }}"><i class="fa fa-fw fa-users"></i> Users</a>
                     </li>
                     <li {{{ (Request::is('admin/category') ? 'class=active' : '') }}} >
-                        <a href="{{ route('admin.category') }}"><i class="fa fa-fw fa-tags"></i> Categorie</a>
+                        <a href="{{ route('admin.category') }}"><i class="fa fa-fw fa-tags"></i> Categories</a>
                     </li>
                     <li {{{ (Request::is('admin/setting') ? 'class=active' : '') }}} >
-                        <a href="{{ route('admin.setting') }}"><i class="fa fa-fw fa-wrench"></i> Impostazioni</a>
+                        <a href="{{ route('admin.setting') }}"><i class="fa fa-fw fa-wrench"></i> Settings</a>
                     </li>
                     
                     <li {{{ (Request::is('recipe/create') ? 'class=active' : '') }}} >
-                        <a href="{{ route('recipe.create') }}"><i class="fa fa-fw fa-file"></i> Crea Ricetta</a>
+                        <a href="{{ route('recipe.create') }}"><i class="fa fa-fw fa-file"></i> Create Recipes</a>
                     </li>
                     <li {{{ (Request::is('/') ? 'class=active' : '') }}} >
-                        <a href="{{ url('/home') }}"><i class="fa fa-fw fa-laptop "></i> Vedi il sito</a>
+                        <a href="{{ url('/home') }}"><i class="fa fa-fw fa-laptop "></i> See Website</a>
                     </li>
                 </ul>
             </div>

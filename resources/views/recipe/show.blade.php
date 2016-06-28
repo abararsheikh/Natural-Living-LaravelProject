@@ -31,9 +31,9 @@ if(strpos(URL::previous(),  'admin')!=false && Auth::check()){
                                 <img src="{{asset('assets/img/recipe/default.png')}}" alt="recipe image" class="img-responsive img-thumbnail" />
                                 @endif
                                 <h4 class="media-heading"> {{ $recipe->title }}</h4>
-                                <p class="text-right">Autore: {{ $recipe->user->name }}</p>
+                                <p class="text-right">Author: {{ $recipe->user->name }}</p>
                                 <div class="ingredients-box">
-                               <h4 class="media-heading">Ingredienti: </h4>
+                               <h4 class="media-heading">Ingredients: </h4>
                                
                                    <ul style="list-style:none;">
                                @foreach ($ingredients_to_recipes as $ingredient)
@@ -44,7 +44,7 @@ if(strpos(URL::previous(),  'admin')!=false && Auth::check()){
                                
                                 </div>
                                 <div class="col-sm-12">
-                                    <h4>Categoria:  {{ $recipe->category->name }} </h4>
+                                    <h4>Categories:  {{ $recipe->category->name }} </h4>
                                     
                                 </div>
                                <div class="description-box2">
@@ -56,22 +56,22 @@ if(strpos(URL::previous(),  'admin')!=false && Auth::check()){
                 <ul class="list-inline list-unstyled">
                     
                
-  			<li><span><i class="glyphicon glyphicon-calendar"></i> Data : {{ $recipe->created_at->format('d-m-Y') }}</span></li>
+  			<li><span><i class="glyphicon glyphicon-calendar"></i> Date: {{ $recipe->created_at->format('d-m-Y') }}</span></li>
             <li>|</li>
-            <span><i class=" glyphicon glyphicon-sort-by-attributes"></i> {{$ingredients_to_recipes->count()}} n° ingredienti</span>
+            <span><i class=" glyphicon glyphicon-sort-by-attributes"></i> {{$ingredients_to_recipes->count()}} Ingredients</span>
             <li>|</li>
             <li>
-                <span class="glyphicon glyphicon-tasks"></span> Difficolt&agrave;: 
+                <span class="glyphicon glyphicon-tasks"></span> Difficulty Level&agrave;:
             {{ $recipe->difficult }}
             
                         
             </li>
             <li>|</li>
             @if ((Auth::check() && Auth::id()==$recipe->user_id) || (Auth::check() && Auth::user()->isAdmin() ) )
-            <li>	<a class="btn btn-warning pull" href="{{ route('recipe.edit', ['id' => $recipe->id]) }}">Modifica</a></li>
+            <li>	<a class="btn btn-warning pull" href="{{ route('recipe.edit', ['id' => $recipe->id]) }}">Modify</a></li>
             <li>|</li>
             <li>{{ Form::open(['route' => ['recipe.destroy', $recipe->id], 'method' => 'delete', 'id' => 'delete-form']) }}
-             <button class="btn btn-danger pull" id="#delete" type="submit">Elimina</button>
+             <button class="btn btn-danger pull" id="#delete" type="submit">Delete</button>
             {{ Form::close() }}</li>
            
             @endif

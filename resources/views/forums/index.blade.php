@@ -13,6 +13,9 @@
     <h2 style="text-align: center;">Natural Living Forum</h2>
     <p style="text-align: right;"><a href="{{ url('/forum/create')}}"><button type="button">Add New Forum</button></a></p>
     <style>
+        td, td{
+            padding: 2px 15px;
+        }
         th{
             padding: 10px;
             background-color: #281E98;

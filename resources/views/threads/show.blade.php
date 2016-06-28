@@ -7,9 +7,14 @@
 @section('content')
     <div style="width:90%; margin-left: auto; margin-right: auto;">
 
+        <style>
+            td, th {
+                padding: 10px 15px;
+            }
+        </style>
         <h2 style="text-align:center;">Natural Living Discussion Board</h2>
 
-        <table style="width: 90%; border: 1px solid black; background-color: #F6FEBE; padding: 15px; font-family:Arial, sans-serif">
+        <table style="width: 90%; border: 1px solid black; margin-bottom: 20px; background-color: #F6FEBE; padding: 15px; font-family:Arial, sans-serif">
             <tr>
                 <td colspan="2" style="font-size: 25px; font-weight: bold; padding-bottom: 15px;" />
                     <?php echo $thread->thread_topic; ?>
@@ -26,7 +31,7 @@
             </tr>
         </table>
         <p>
-            <a href="{{ url('/forum')}}"><button type="button">Reply</button></a>
+            <a href="{{ url('/comment/add', $thread->id)}}"><button type="button">Reply</button></a>
             <a href="{{ url('/thread/checkpwd01',$thread->id) }}" style="<?php if(count($comments) != 0){echo 'display:none;';} else{echo 'display:inline;';}?>"><button type="button">Edit</button></a>
             <a href="{{ url('/thread/checkpwd02',$thread->id) }}"><button type="button">Delete</button></a>
             <a href="{{ url('/thread', $thread->thread_forum)}}"><button type="button">Back to the List</button></a>
@@ -51,7 +56,7 @@
             </tr>
         </table>
         <p>
-            <a href="{{ url('/forum')}}"><button type="button">Delete</button></a>
+            <a href="{{ url('/comment/checkpwd03',$comment->id)}}"><button type="button">Delete</button></a>
         </p>
         <?php } ?>
     </div>

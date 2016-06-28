@@ -131,7 +131,6 @@ Route::group(['middleware' => 'web'], function () {
 
 
 // forum 
-
 Route::get('/forum','ForumController@index');
 Route::get('/forum/create', 'ForumController@create');
 Route::post('/forum', 'ForumController@store');
@@ -162,4 +161,8 @@ Route::get('/thread/checkpwd02/{id}', 'ThreadController@pwdcheckfordelete');
 Route::post('/thread/checkpwd02/{id}', 'ThreadController@pwdcheckfordelete2');
 
 
+Route::get('/comment/add/{id}', 'CommentController@create');
+Route::post('/comment/add/{id}', 'CommentController@store');
 
+Route::get('/comment/checkpwd03/{id}', 'CommentController@pwdchkfordelete');
+Route::post('/comment/checkpwd03/{id}', 'CommentController@pwdchkfordelete2');

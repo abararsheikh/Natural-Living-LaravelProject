@@ -17,6 +17,9 @@
             background-color: #281E98;
             color: white;
         }
+        td, th {
+            padding: 2px 15px;
+        }
 
     </style>
     <p style="text-align:right; color:red;">*Every form elements are required fields</p>
